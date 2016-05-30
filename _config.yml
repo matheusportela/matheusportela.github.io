@@ -15,7 +15,3 @@ markdown: kramdown
 
 # Permalinks
 permalink: :title
-
-paginate: 3
-
-gems: [jekyll-paginate]
