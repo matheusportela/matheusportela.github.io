@@ -8,8 +8,7 @@ url: http://matheusportela.github.io # the base hostname & protocol for your sit
 twitter_username: matheusvportela
 github_username:  matheusportela
 author:
-  name: 'Matheus Portela'
-  url: https://twitter.com/mdo
+  name: Matheus Portela
 
 # Build settings
 markdown: kramdown
