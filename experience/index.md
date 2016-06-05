@@ -25,8 +25,8 @@ During my internship at the [CSIRO](http://www.csiro.au), in Australia, I could 
 ## Didactic Assembler
 As a student in Systems Software course, we had the task of writing our own assembler, which would translate a source file written in didactic assembly language to binary output, the last should run in our own simulator. [Here](http://github.com/matheusportela/sb-assembler) is the GitHub repository containing the whole code, written in pure **C** language.
 
-## Caesar Cipher
-I implemented the Caesar cipher cryptography algorithm in C and also provided a Python extension for it as the first step in my studies in cryptography. [Here](https://github.com/matheusportela/caesar-cipher) is the GitHub repository containing the code and documentation.
+## Cryptography
+I started studying cryptography in 2016 with a hands-on approach by implementing some of the most common cryptographic algorithms. So far, I implemented the Vigenère cipher cryptography algorithm in C with a Python extension (check out my GitHub repo [here](https://github.com/matheusportela/vigenere-cipher)) as well as the Caesar cipher (GitHub repo [here](https://github.com/matheusportela/caesar-cipher)).
 
 ## Simpletable
 simpletable is a lightweight **Python** module for generating simple HTML tables without requiring the installation of any third-party libraries. Checkout the code in [this GitHub repository](https://github.com/matheusportela/simpletable).
