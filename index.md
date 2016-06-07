@@ -2,6 +2,7 @@
 layout: page
 title: Home
 ---
+
 I am a Developer Entrepreneur in Residence a [**Simbiose Ventures**](http://www.simbioseventures.com), where I create products with Machine Learning capabilities. I have graduated in **Mechatronics Engineering** at the [**University of Brasília**](http://www.unb.br) in 2015, with an undergraduate thesis on reinforcement learning for stochastic multiagent systems. I've also been an exchange student at the [**Australian National University**](http://www.anu.edu.au) in 2012.
 
 <center><img src="/assets/images/me.jpg"></center>
