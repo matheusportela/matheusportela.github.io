@@ -1,0 +1,32 @@
+---
+layout: post
+status: publish
+published: true
+title: 'Enigma machine - Day 1 #100DaysOfCode'
+date: '2016-06-22 00:06:00 +0000'
+date_gmt: '2016-06-22 03:06:00 +0000'
+categories:
+- Programming
+tags:
+- programming
+- challenge
+comments: []
+---
+
+Today was my first day on the [#100DaysOfCode challenge](/100-days-of-code) so I started working on defining the scope of my challenge. What should I start working on? For the past few weeks, I've been working on some basic cryptography algorithms, namely the [Caesar](https://github.com/matheusportela/caesar-cipher) and the [Vinegère Ciphers](https://github.com/matheusportela/vigenere-cipher). It was natural to follow the same line of work.
+
+So I opened the book [Cryptography - An Introduction, by Nigel Smart,](https://www.amazon.com/Cryptography-Introduction-Nigel-Smart/dp/0077099877) and checked what comes after chapter 3, on historical ciphers. For my surprise, chapter 4 talks about a pretty interesting and challenging machine that defied some of the most brilliant minds of the 20th century: [**Enigma**](https://en.wikipedia.org/wiki/Enigma_machine).
+
+<center><img src="/assets/images/enigma.jpg" height="350"></center>
+
+For those who didn't watched [The Imitation Game](http://www.imdb.com/title/tt2084970/), one of my best movies of the last year, I'll provide a brief explanation. Enigma was an electromechanical machine developed in the early 20's, later used by the Nazi militaries to encode secret messages that were transmited through telegraphs during the World War II. For the Allies, the greatest challenge was to learn the contents inside the coded messages fast enough to uncover their enemies plans and save the lives of their soldiers. Among others, [Alan Turing](https://en.wikipedia.org/wiki/Alan_Turing) was one of the people who worked on breaking Enigma.
+
+<center><img src="/assets/images/alan_turing.jpg"></center>
+
+But just working on Enigma wasn't enough for a real challenge. After all, I don't even need to build a mechanical replica (although that's a really cool idea for a future project) but only program it. Let's increase the bid.
+
+Even though JavaScript is one of the most popular programming languages in the world, specially in web applications, I've never put enough effort into learning it. After spending a weekend playing with it in a Code Dojo that happened at the University of Brasilia, I think I can learn my way to build an Enigma simulator with it.
+
+Hence here is the challenge: **simulate Enigma in Javascript**.
+
+I've already started my first steps into JavaScript and Enigma. Want to follow my work during this challenge? Follow [my GitHub repository](https://github.com/matheusportela/enigma-machine) and let me know in my twitter account [@matheusvportela](https://twitter.com/matheusvportela).
