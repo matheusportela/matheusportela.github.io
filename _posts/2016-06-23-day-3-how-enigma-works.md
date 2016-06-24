@@ -119,3 +119,11 @@ Now we can finally understand the entire path of a letter being encoded by Enigm
 <center><img src="/assets/images/enigma_letter_path.png"></center>
 
 I hope you could understand a little bit of how Enigma works with this article. If you have any questions or saw something that isn't correct, please get in contact with me through my twitter account [@matheusvportela](https://twitter.com/matheusvportela). Also, check how my implementation of Enigma is going in [my GitHub repository](https://github.com/matheusportela/enigma-machine).
+
+## References
+
+- [Enigma machine - Wikipedia](https://en.wikipedia.org/wiki/Enigma_machine)
+- [Enigma rotor details - Wikipedia](https://en.wikipedia.org/wiki/Enigma_rotor_details)
+- [How Enigma Machines Work - Louise Dade](http://enigma.louisedade.co.uk/howitworks.html)
+- [Working principle of the Enigma - Crypto Museum](http://www.cryptomuseum.com/crypto/enigma/working.htm)
+- [Technical Details of the Enigma Machine - Dirk Rijmenants](http://users.telenet.be/d.rijmenants/en/enigmatech.htm)
