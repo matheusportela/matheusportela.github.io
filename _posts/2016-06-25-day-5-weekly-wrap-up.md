@@ -16,7 +16,7 @@ comments: []
 
 It's 1:50 AM of Saturday and I just finished my coding sprint for today. Since I don't have enough time to write about a complex topic, this post is a pretty small update on what I've got so far:
 
-- Working with Javascript is being much a pleasant experience than I've expected. Expect by small details such as [differentiating JavaScript and ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) and learning a bit about [object-oriented languages with prototypal inheritance](http://www.crockford.com/javascript/inheritance.html), pretty much all details can be inferred from other loosely-typed languages, such as Python, Ruby, and Shell Script.
+- Working with Javascript is being much a pleasant experience than I've expected. Except by small details such as [differentiating JavaScript and ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) and learning a bit about [object-oriented languages with prototypal inheritance](http://www.crockford.com/javascript/inheritance.html), pretty much all details can be inferred from other loosely-typed languages, such as Python, Ruby, and Shell Script.
 - [TDD](day-2-tdd-in-javascript) is actually working, giving me enough confidence to change a few things in the code without the fear of breaking some other part. Besides, my [code coverage](https://en.wikipedia.org/wiki/Code_coverage) is also pretty high without much effort:
 
 ```
