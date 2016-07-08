@@ -69,4 +69,4 @@ This mathematical development is based on the following video, where Dr. James G
 
 That's it for today, folks.
 
-This you like this post? If so, get in contact with me via my twitter account [@matheusvportela](https://twitter.com/matheusvportela) and follow [my GitHub repository](https://github.com/matheusportela/enigma-machine), where I'm developing a Enigma simulator in JavaScript.
+Did you like this post? If so, get in contact with me via my twitter account [@matheusvportela](https://twitter.com/matheusvportela) and follow [my GitHub repository](https://github.com/matheusportela/enigma-machine), where I'm developing a Enigma simulator in JavaScript.
