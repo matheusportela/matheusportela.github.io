@@ -3,8 +3,8 @@ layout: post
 status: publish
 published: true
 title: "Combinatorial explosion - Day 16 #100DaysOfCode"
-date: '2016-06-30 18:40:00 +0000'
-date_gmt: '2016-06-30 21:40:00 +0000'
+date: '2016-07-07 22:41:00 +0000'
+date_gmt: '2016-07-08 01:41:00 +0000'
 categories:
 - Programming
 tags:
