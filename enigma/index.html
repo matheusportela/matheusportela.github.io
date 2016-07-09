@@ -20,13 +20,25 @@
                 <input class="input-text" id="enigma-input" type="text" placeholder="Input">
             </div>
 
-            <div class="encode-section">
-                <button class="encode-btn" id="encode-btn">Encode</button>
-            </div>
-
             <div class="output-section">
                 <input class="output-text" id="enigma-output" type="text" placeholder="Output" readonly>
             </div>
+        </div>
+
+        <div class="configuration-section">
+            <h2>Rotors settings</h2>
+
+            <label>Initial position</label>
+            <input class="rotor-config" id="rotor-left-pos" value="Q">
+            <input class="rotor-config" id="rotor-middle-pos" value="I">
+            <input class="rotor-config" id="rotor-right-pos" value="J">
+
+            <br>
+
+            <label>Ring settings</label>
+            <input class="rotor-config" id="ring-left-pos" value="M">
+            <input class="rotor-config" id="ring-middle-pos" value="W">
+            <input class="rotor-config" id="ring-right-pos" value="B">
         </div>
 
         <script type="text/javascript">
@@ -41,16 +53,16 @@
                 machine.setPlugboard(new Plugboard('MA', 'VB', 'PF'));
 
                 var rightRotor = new RotorIII();
-                rightRotor.setInnerPosition('B');
-                rightRotor.setInitialPosition('J');
+                rightRotor.setInnerPosition($('#ring-right-pos').val());
+                rightRotor.setInitialPosition($('#rotor-right-pos').val());
 
                 var middleRotor = new RotorII();
-                middleRotor.setInnerPosition('W');
-                middleRotor.setInitialPosition('I');
+                middleRotor.setInnerPosition($('#ring-middle-pos').val());
+                middleRotor.setInitialPosition($('#rotor-middle-pos').val());
 
                 var leftRotor = new RotorIV();
-                leftRotor.setInnerPosition('M');
-                leftRotor.setInitialPosition('Q');
+                leftRotor.setInnerPosition($('#ring-left-pos').val());
+                leftRotor.setInitialPosition($('#rotor-left-pos').val());
 
                 machine.setRotors(leftRotor, middleRotor, rightRotor);
 
@@ -66,17 +78,9 @@
 
             $('#enigma-input').keyup(function(e) {
                 input = $(this).val();
-                validInput = input.replace(/([^a-zA-Z]+)/gi, '');
+                validInput = input.replace(/([^a-zA-Z]+)/gi, '').toUpperCase();
                 $(this).val(validInput);
-            });
-
-            $('#encode-btn').click(function() {
-                input = $('#enigma-input').val().toUpperCase();
-
-                if (isValidInput(input)) {
-                    output = encode(input);
-                    $('#enigma-output').val(output);
-                }
+                $('#enigma-output').val(encode(validInput));
             });
         });
         </script>
