@@ -25,6 +25,9 @@ During my internship at the [CSIRO](http://www.csiro.au), in Australia, I could 
 ## Didactic Assembler
 As a student in Systems Software course, we had the task of writing our own assembler, which would translate a source file written in didactic assembly language to binary output, the last should run in our own simulator. [Here](http://github.com/matheusportela/sb-assembler) is the GitHub repository containing the whole code, written in pure **C** language.
 
+## Enigma Machine Simulator
+As part of my [#100DaysOfCode initiative](/day-1-enigma), I developed an [Enigma machine](https://en.wikipedia.org/wiki/Enigma_machine) simulator from the ground up. For about two weeks, I've studied the machine technical details, wrote the simulator code in JavaScript and Node.js using a Test-Driven Development approach, created a web interface, and documented the steps in blog articles. The code is available at [my GitHub repository](https://github.com/matheusportela/enigma-machine/).
+
 ## Cryptography
 I started studying cryptography in 2016 with a hands-on approach by implementing some of the most common cryptographic algorithms. So far, I implemented the Vigenère cipher cryptography algorithm in C with a Python extension (check out my GitHub repo [here](https://github.com/matheusportela/vigenere-cipher)) as well as the Caesar cipher (GitHub repo [here](https://github.com/matheusportela/caesar-cipher)).
 
