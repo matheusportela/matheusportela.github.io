@@ -65,7 +65,7 @@ Now we understand what Enigma represents. Even if we consider that a modern comp
 
 This mathematical development is based on the following video, where Dr. James Grime provides a beautiful and didactic mathematical proof. I strongly recommend everyone to watch it.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/G2_Q9FoD-oQ" frameborder="0" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/G2_Q9FoD-oQ" frameborder="0" allowfullscreen></iframe></center>
 
 That's it for today, folks.
 
