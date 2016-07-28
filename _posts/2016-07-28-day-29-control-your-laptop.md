@@ -56,9 +56,11 @@ On Macbook, it turns out that [osascript](http://ss64.com/osx/osascript.html) wi
 
 # The results
 
-By now **Control Your Laptop** is working pretty fine. I could finally watch something before going to sleep and stop it without leaving my bed. Check it out [here](https://www.facebook.com/matheus.v.portela/activity/1125305284181923). The dog days are over!
+By now **Control Your Laptop** is working pretty fine. I could finally watch something before going to sleep and stop it without leaving my bed. The dog days are over!
 
 <center><img src="/assets/images/control_your_laptop.jpg" height="300"></center>
+
+<center><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmatheus.v.portela%2Fvideos%2F1125305287515256%2F&show_text=0&width=600" width="600" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></center>
 
 Nonetheless, there are several points of improvement in this project, such as:
 
