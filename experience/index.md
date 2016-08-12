@@ -31,5 +31,10 @@ As part of my [#100DaysOfCode initiative](/day-1-enigma), I developed an [Enigma
 ## Cryptography
 I started studying cryptography in 2016 with a hands-on approach by implementing some of the most common cryptographic algorithms. So far, I implemented the Vigenère cipher cryptography algorithm in C with a Python extension (check out my GitHub repo [here](https://github.com/matheusportela/vigenere-cipher)) as well as the Caesar cipher (GitHub repo [here](https://github.com/matheusportela/caesar-cipher)).
 
+## Collatz Conjecture
+After watching a video on the [Collatz Conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture), if decided to implement it in Haskell. You can find my script [here](https://github.com/matheusportela/collatz).
+
+<center><iframe width="420" height="315" src="https://www.youtube.com/embed/5mFpVDpKX70" frameborder="0" allowfullscreen></iframe></center>
+
 ## Simpletable
 simpletable is a lightweight **Python** module for generating simple HTML tables without requiring the installation of any third-party libraries. Checkout the code in [this GitHub repository](https://github.com/matheusportela/simpletable).
