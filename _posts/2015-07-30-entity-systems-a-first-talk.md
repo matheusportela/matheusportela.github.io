@@ -33,19 +33,19 @@ My first trial involved a **hierarchical** game engine.The idea is intuitive and
 
 Let's see an example: I want to make an alien and a penguin objects, where both are able to move around the world. In a hierarchical game, I would first implement the *MoveableObject* class, with the logic for moving objects in the game world, then I would make *AlienObject* and *PenguinObject* classes inherit from it and, finally, implement their specific methods.
 
-<center><img src="/assets/images/entity_system_1.jpeg"/></center>
+<img src="/assets/images/entity_system_1.jpeg"/>
 
 Nice, right? Well... this works for simple programs such as the example above. However, problems arise when writing larger games, which usually have dozens or hundreds of classes with several logical interdependencies. I'll illustrate it with another example.
 
 This time, I need to expand the game so as the alien can shoot, but not the penguin. In order to do that while allowing future classes to shoot as well, I can use a programming language that allows multiple inheritance, create a *ShootBehavior* and make *AlienObject* inherit from both *ShootBehavior *and *MoveableObject*. This is a feasible but undesirable solution since, for most programmers, even reading the words "multiple inheritance" [gives them nightmares](http://stackoverflow.com/questions/225929/what-is-the-exact-problem-with-multiple-inheritance). Of course, we can move all shooting logic to *MoveableObject *or* GameObject*, but that's definitely not a reasonable OO solution since it violates the [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
-<center><img src="/assets/images/entity_system_2.jpeg"/></center>
+<img src="/assets/images/entity_system_2.jpeg"/>
 
 Say I need smaller penguins in the game, which are pretty similar to the original one but with a few particularities. It is natural to create a *SmallPenguinObject* class that inherits from *PenguinObject*.
 
 Now, I may write some AI logic for the small penguin which, curiously, I need to implement in the alien as well. The problem is: these classes are in different hierarchy branches. How can we implement the same logic in both classes without appealing to code replication?
 
-<center><img src="/assets/images/entity_system_3.jpeg"/></center>
+<img src="/assets/images/entity_system_3.jpeg"/>
 
 Tough problem, isn't it? It turns out that some people have already faced this kind of problem before and thought out a solution by modifying their idea of what constitutes a game object. Instead of implementing the game logic directly in each object class (such as *AlienObject, PenguinObject*, and *SmallPenguinObject*), this logic can be built from **components** that give the objects some behavior.
 
@@ -53,7 +53,7 @@ For instance, in order to make an object move, I can create a *MoveableComponent
 
 In order to achieve the behavior I want, all that is needed is to create the *MoveableComponent*, *ShootComponent*, and *AIComponent* classes, instantiating them to the objects I want to. In this example, all objects have the a *MoveableComponent* instance. *AlienObject* would also have the *ShootComponent* and *AIComponent* instances, and *SmallPenguinObject* has a *AIComponent* instance.
 
-<center><img src="/assets/images/entity_system_4.jpeg"/></center>
+<img src="/assets/images/entity_system_4.jpeg"/>
 
 The approaching of building objects by attaching components into it is, roughly speaking, an **entity system**. In fact, in a true entity system, game entities (objects) are simply ID numbers which have components attached to it. Components just hold data that is processed by systems, the place where behaviors are implemented. An entity manager is responsible for providing query methods that select entities and components according to the desired criteria, as well as managing addition, deletion, and attaching of entities and components. Finally, a system manager runs the systems, executing the game indeed.
 

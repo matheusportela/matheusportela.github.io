@@ -34,17 +34,17 @@ That's how **Control Your Laptop** came to this world.
 
 I had to acquire some hardware to receive commands from my infrared remote control. After some research, I found out the TL1838 infrared receivers were ideal for this use case. They are small, operate in the 38 kHz frequency, filter out noise, and can be found on Amazon, eBay, Alibaba, Deal Extreme... I bought some of them online and studied the internals of this sensor with [this datasheet](https://github.com/matheusportela/control-your-laptop/blob/master/references/Datasheet%20-%20TSOP1838.pdf), which was really useful.
 
-<center><img src="/assets/images/tsop1838.jpg" height="150"></center>
+<img src="/assets/images/tsop1838.jpg" height="150">
 
 Next, I would have to build some interface to communicate the sensor with my computer. I realized I could save a lot of time by using an Arduino with USB connection and that's exactly what I did by using an Arduino Nano, which cost less than USD 7.00 and has the USB jack I needed. [This pinout](https://github.com/matheusportela/control-your-laptop/blob/master/references/Arduino%20Nano%203.0%20-%20Pins.png) allowed me to know exactly how to connect the sensor to the Arduino's pins.
 
-<center><img src="/assets/images/arduino_nano.jpg" height="200"></center>
+<img src="/assets/images/arduino_nano.jpg" height="200">
 
 # The communication
 
 Next step was figuring out how to decode control signals, i.e., I had to reverse engineer my control communication protocol. I started by studying [this tutorial on remote control protocols](https://github.com/matheusportela/control-your-laptop/blob/master/references/Data%20Formats%20for%20IR%20Remote%20Control.pdf) and also built a [simple script](https://github.com/matheusportela/control-your-laptop/blob/master/scripts/plot_signal.py) in Python to plot received signals in real-time. For instance, the following image represents the signal emitted by the control after pressing one button.
 
-<center><img src="/assets/images/remote_control_signal.png" height="300"></center>
+<img src="/assets/images/remote_control_signal.png" height="300">
 
 Of course, in order to achieve that, I had to write a [firmware to my Arduino](https://github.com/matheusportela/control-your-laptop/tree/master/firmware) that could track with high precision how much time was spent in HIGH or LOW states. So, I dig a bit on ATmega counters and timers with the help of [this tutorial](http://sphinx.mythic-beasts.com/~markt/ATmega-timers.html) and set a timer with 4 microsecond granularity. Hence, the firmware would only capture the duration for every HIGH or LOW and send them via USB to be processed by a script in my computer.
 
@@ -58,7 +58,7 @@ On Macbook, it turns out that [osascript](http://ss64.com/osx/osascript.html) wi
 
 By now **Control Your Laptop** is working pretty fine. I could finally watch something before going to sleep and stop it without leaving my bed. The dog days are over!
 
-<center><img src="/assets/images/control_your_laptop.jpg" height="300"></center>
+<img src="/assets/images/control_your_laptop.jpg" height="300">
 
 <center><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmatheus.v.portela%2Fvideos%2F1125305287515256%2F&show_text=0&width=600" width="600" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></center>
 

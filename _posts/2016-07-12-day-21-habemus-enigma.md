@@ -15,7 +15,7 @@ comments: []
 
 After about three weeks of studying Enigma's technical components, learning JavaScript details, and tweaking CSS to select the best font, I can finally say: **HABEMUS ENIGMA!**
 
-<center><img src="/assets/images/tetra.gif"></center>
+<img src="/assets/images/tetra.gif">
 
 You can access it's web interface right [here](/enigma) and check out its code at [my GitHub repository](https://github.com/matheusportela/enigma-machine).
 
