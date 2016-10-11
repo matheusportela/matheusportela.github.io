@@ -1,0 +1,115 @@
+body {
+    color: #34495e;
+    background-color: #f6f6f6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    color: #2980b9;
+}
+
+h1 {
+    font-size: 1.15em;
+}
+
+h2 {
+    font-size: 1.1em;
+}
+
+h3 {
+    font-size: 1.05em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: 0.95em;
+}
+
+h6 {
+    font-size: 0.9em;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    color: #2c3e50;
+}
+
+a:hover {
+    color: #3498db;
+}
+
+img {
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+li {
+    margin: 10px 0;
+    list-style-type: square;
+}
+
+.content {
+    padding: 0 40px;
+}
+
+.navbar {
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    padding: 5px 0;
+    margin: 0 40px;
+}
+
+.navbar-item {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom-style: none;
+}
+
+.page, .post, .related {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.page-title, .post .post-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.post-date {
+    display: block;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: right;
+}
+
+.post-list-item {
+    text-transform: uppercase;
+    margin: 10px auto;
+}
+
+.post-list-item a {
+    text-decoration: none;
+}
+
+.post-list-date {
+    font-size: 0.75em;
+    display: inline-block;
+    width: 7em;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 10em;
+}
