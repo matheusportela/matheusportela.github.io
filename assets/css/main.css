@@ -1,12 +1,18 @@
+@media screen and (min-width: 600px) {
+    body {
+        margin: 0 auto;
+        width: 60%;
+    }
+}
+
 body {
-    color: #34495e;
-    background-color: #f6f6f6;
+    margin-bottom: 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    color: #2980b9;
+    font-family: 'Lora', serif;
+    font-weight: lighter;
+    color: #900;
 }
 
 h1 {
@@ -34,7 +40,6 @@ h6 {
 }
 
 a {
-    font-weight: bold;
     text-decoration: none;
     border-bottom-style: dotted;
     border-bottom-width: 1px;
@@ -42,7 +47,7 @@ a {
 }
 
 a:hover {
-    color: #3498db;
+    color: #BC1B00;
 }
 
 img {
@@ -66,13 +71,14 @@ li {
     border-bottom-width: thin;
     padding: 5px 0;
     margin: 0 40px;
+    text-align: center;
 }
 
 .navbar-item {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.75em;
-    text-transform: uppercase;
     text-decoration: none;
+    text-transform: uppercase;
     border-bottom-style: none;
 }
 
@@ -80,11 +86,17 @@ li {
     font-family: 'Open Sans', sans-serif;
 }
 
-.page-title, .post .post-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.5em;
+.site-title, .page-title, .post .post-title {
+    font-family: 'Lora', serif;
     text-align: center;
-    text-transform: uppercase;
+}
+
+.site-title {
+    font-size: 2em;
+}
+
+.page-title, .post .post-title {
+    font-size: 1.5em;
 }
 
 .post-date {

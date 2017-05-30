@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Matheus Portela
 ---
 
 ![](/assets/images/me.jpg){:class="avatar"}
