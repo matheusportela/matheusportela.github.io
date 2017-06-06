@@ -1,17 +1,12 @@
 <h1 class="site-title">Matheus Portela</h1>
 
 <nav class="navbar">
-  <a class="navbar-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
-
-  {% comment %}
-    The code below dynamically generates a navbar nav of pages with
-    `layout: page` in the front-matter. See readme for usage.
-  {% endcomment %}
+  <a class="navbar-item{% if page.url == site.baseurl %} navbar-item-active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
   {% for node in site.pages %}
     {% if node.title != 'Matheus Portela' %}
       {% if node.layout == "page" %}
-        <a class="navbar-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+        <a class="navbar-item{% if page.url == node.url %} navbar-item-active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
       {% endif %}
     {% endif %}
   {% endfor %}

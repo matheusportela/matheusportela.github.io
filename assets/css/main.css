@@ -86,6 +86,10 @@ li {
     border-bottom-style: none;
 }
 
+.navbar-item-active {
+    color: #BC1B00;
+}
+
 .page, .post, .related {
     font-family: 'Open Sans', sans-serif;
 }
