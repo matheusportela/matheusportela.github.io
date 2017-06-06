@@ -39,6 +39,10 @@ h6 {
     font-size: 0.9em;
 }
 
+p, li {
+    font-size: 0.9em;
+}
+
 a {
     text-decoration: none;
     border-bottom-style: dotted;
