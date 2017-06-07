@@ -72,6 +72,8 @@ img {
     display: block;
     margin: 10px auto;
     max-width: 100%;
+    width: auto;
+    height: auto;
 }
 
 li {
