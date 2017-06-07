@@ -80,7 +80,13 @@ li {
 }
 
 .content {
-    padding: 0 40px;
+    padding: 0 20px;
+}
+
+@media screen and (min-width: 600px) {
+    .content {
+        padding: 0 40px;
+    }
 }
 
 .navbar {
