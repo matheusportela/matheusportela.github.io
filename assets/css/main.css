@@ -52,6 +52,10 @@ code {
     padding: 0 5px;
 }
 
+pre code {
+    padding: 0;
+}
+
 a {
     text-decoration: none;
     border-bottom-style: dotted;
