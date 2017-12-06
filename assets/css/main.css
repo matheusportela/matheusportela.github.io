@@ -43,10 +43,17 @@ p, li {
     font-size: 1em;
 }
 
+pre {
+    background-color: #f6f6f6;
+    border-radius: 2px;
+    padding: 0 5px;
+    overflow-x: scroll;
+}
+
 code {
     font-family: 'Droid Sans Mono', monospace;
     font-size: 0.9em;
-    color: #BC1B00;
+    color: #bc1b00;
     background-color: #f6f6f6;
     border-radius: 2px;
     padding: 0 5px;
@@ -64,7 +71,7 @@ a {
 }
 
 a:hover {
-    color: #BC1B00;
+    color: #bc1b00;
 }
 
 img {
@@ -108,7 +115,7 @@ li {
 }
 
 .navbar-item-active {
-    color: #BC1B00;
+    color: #bc1b00;
 }
 
 .page, .post, .related {

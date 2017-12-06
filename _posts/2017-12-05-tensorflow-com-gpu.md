@@ -187,12 +187,12 @@ $ pip install numpy wheel
 Também vamos instalar o Java 8 da Oracle e o [Bazel](https://bazel.build/), o sistema de build criado pela Google e utilizado pelo Tensorflow.
 
 ```
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt install oracle-java8-installer
-echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
-curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
-sudo apt update
-sudo apt install bazel
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo apt install oracle-java8-installer
+$ echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+$ curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+$ sudo apt update
+$ sudo apt install bazel
 ```
 
 Agora, podemos clonar o repositório do Tensorflow para a nossa máquina.
