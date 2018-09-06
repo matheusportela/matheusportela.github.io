@@ -9,7 +9,7 @@ I am passionate about computers: hardware, software, theory, history... For the 
 Besides being a Software Developer, my interests include volleyball (I have even been a coach during my undergraduate degree), classical acoustic guitar (specially Brazilian styles, such as [Choro](https://www.youtube.com/watch?v=xDzekDP4IKI), [Samba](https://www.youtube.com/watch?v=XoUtxWU8lW8) and [Bossa Nova](https://www.youtube.com/watch?v=5LfaYKdqfnY)) and foreign languages (I speak Portuguese, English, Spanish and French so far).
 
 ## Education
-- May 2020 (_in progress_): Master of Science in Computer Science at the [New York University](http://www.nyu.edu), [Tandon School of Engineering](https://engineering.nyu.edu/)
+- May 2020: Master of Science in Computer Science at the [New York University](http://www.nyu.edu), [Tandon School of Engineering](https://engineering.nyu.edu/)
 - Dec 2015: Bachelor of Engineering in Mechatronics Engineering at the [University of Brasília](http://www.unb.br)
 - Jun 2012 - Jun 2013: Exchange program at the [Australian National University](http://www.anu.edu.au)
 
