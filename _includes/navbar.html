@@ -1,13 +1,9 @@
 <h1 class="site-title">Matheus Portela</h1>
 
 <nav class="navbar">
-  <a class="navbar-item{% if page.url == site.baseurl %} navbar-item-active{% endif %}" href="{{ site.baseurl }}">Home</a>
-
-  {% for node in site.pages %}
-    {% if node.title != 'Matheus Portela' %}
-      {% if node.layout == "page" %}
-        <a class="navbar-item{% if page.url == node.url %} navbar-item-active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-      {% endif %}
-    {% endif %}
-  {% endfor %}
+  <a class="navbar-item" href="/">Home</a>
+  <a class="navbar-item" href="/portfolio">Portfolio</a>
+  <a class="navbar-item" href="/publications">Publications</a>
+  <a class="navbar-item" href="/blog">Blog</a>
+  <a class="navbar-item" href="/contact">Contact</a>
 </nav>
