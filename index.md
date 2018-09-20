@@ -14,6 +14,7 @@ Besides being a Software Developer, my interests include volleyball (I have even
 - Jun 2012 - Jun 2013: Exchange program at the [Australian National University](http://www.anu.edu.au)
 
 ## Experience
+- Sep 2018 - present: Graduate Research Assistant at [Control and Network Lab](http://eeweblinux.poly.edu/~canlab/index.html), [NYU Tandon School of Engineering](https://engineering.nyu.edu)
 - Mar 2017 - Jul 2018: Software Developer at [Bxblue (YC S17)](https://bxblue.com.br/), accelerated by [Y Combinator](https://blog.ycombinator.com/bxblue-is-the-only-marketplace-for-payroll-secured-loans-in-brazil/)
 - Jan 2017 - Jun 2017: Lecturer in Software Engineering at [University of Brasília](http://www.unb.br)
 - Nov 2015 - Feb 2017: Software Developer at [Simbiose Ventures](http://www.simbioseventures.com)
