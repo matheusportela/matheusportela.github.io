@@ -75,6 +75,11 @@ _Code: [GitHub](https://github.com/matheusportela/Poiesis)_
 
 During the first semester of 2015, I took the **Game Development class** at my university where we had to develop a game in a group with artists and musicians. The result was **Poïesis**, a **C++** game where you are a cell trying to survive in a hostile environment. The game engine was completely developed from scratch using and **SDL** for low-level OS integration. During this work, I decided to use an Entity System approach, Quad-tree spatial partitioning and developed a Particle and Physics System, which led me to an **Honorable Mention** among the 12 games evaluated.
 
+### Counting Cars (Jan 2015 - Mar 2015)
+_Technologies: `C#`, `XAML`, `.NET`_
+
+As a freelancer, I worked with a friend to develop a GUI that helped collecting human input to count cars from traffic cameras. We used Microsoft technologies to create a desktop application which received input from a joystick and buttons.
+
 ### The A*maze*ing Experience (Jan 2015)
 _Technologies: `C#`, `Unity 3D`, `Game Development`_<br>
 _Code: [GitHub](https://github.com/imota/aMAZEing-experience)_
