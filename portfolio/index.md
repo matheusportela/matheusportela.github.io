@@ -55,7 +55,7 @@ _Code: [Vigenere Cipher](https://github.com/matheusportela/vigenere-cipher) and 
 
 I started studying cryptography in 2016 with a hands-on approach by implementing some of the most common cryptographic algorithms and learn how to combine C code to Python modules. Thus I implemented the Vigenère and Caesar cipher algorithms.
 
-### Distributed Computing with Arduino Boards (Sep 2015)
+### Distributed Computing with Intel Galileo Boards (Sep 2015)
 _Technologies: `Distributed Systems`, `IoT`, `C`_<br>
 _Code: [GitHub](https://github.com/matheusportela/teemeteam)_
 
