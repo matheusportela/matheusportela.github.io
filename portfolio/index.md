@@ -25,6 +25,12 @@ In 2010, invited by a friend, I enjoyed the [UnBall Robot Soccer Team](http://eq
 
 ## All Projects
 
+### Distributed Twitter Clone (Nov 2018 - Dec 2018)
+_Technologies: `Go`, `Raft`, `Protobuf`, `JavaScript`, `Web Components`, `Microservices`, `Consensus Algorithms`_<br>
+_Code: [GitHub](https://github.com/mds796/CSGY9223-Final)_
+
+In the Distributed Systems course at NYU, our team implemented a Twitter clone in a Microservices Architecture. By using Raft as a consensus algorithm, we replicated our microservices in at least 3 machines with inherent fault tolerance, so even if a machine halted, the service would still be available. Our project received the highest grade in the class.
+
 ### Lispy (Feb 2018 - May 2018)
 _Technologies: `Python`, `Lisp`, `TDD`, `Compilers`_<br>
 _Code: [GitHub](https://github.com/matheusportela/lispy)_
