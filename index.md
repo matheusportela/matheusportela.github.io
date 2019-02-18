@@ -28,5 +28,5 @@ Besides being a Software Developer, my interests include volleyball (I have even
 - Frameworks: `Rails`, `Django`, `React`, `Flask`
 - Databases: `PostgreSQL`, `MongoDB`, `Redis`, `Elasticsearch`
 - DevOps: `Docker`, `AWS`, `Ansible`
-- Machine Learning Tools: `Numpy`, `Scikit-learn`, `Pandas`, `Tensorflow`
+- Machine Learning Tools: `PyTorch`, `Numpy`, `Scikit-learn`, `Pandas`, `Tensorflow`
 - Others: `OpenCV`, `Arduino`, `Raspberry Pi`, `Hardware`, `ROS`, `Robotics`
