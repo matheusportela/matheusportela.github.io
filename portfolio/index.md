@@ -5,11 +5,11 @@ title: Portfolio
 
 ## Top 3 Projects
 
-### Enigma Machine Simulator (Jun 2016 - Jul 2016)
-_Technologies: `JavaScript`, `Node.js`, `TDD`, `Simulators`_<br>
-_Code: [GitHub](https://github.com/matheusportela/enigma-machine/)_
+### Distributed Twitter Clone (Nov 2018 - Dec 2018)
+_Technologies: `Go`, `Raft`, `Protobuf`, `JavaScript`, `Web Components`, `Microservices`, `Consensus Algorithms`_<br>
+_Code: [GitHub](https://github.com/mds796/CSGY9223-Final)_
 
-As part of my [#100DaysOfCode initiative](/day-1-enigma), I developed an [Enigma machine](https://en.wikipedia.org/wiki/Enigma_machine) simulator from the ground up. For about three weeks, I've studied the machine technical details, wrote the simulator code in JavaScript and Node.js using a Test-Driven Development approach, created a web interface, and documented the steps in blog articles. You can check the simulator [here](/enigma).
+In the Distributed Systems course at NYU, our team implemented a Twitter clone in a Microservices Architecture. By using Raft as a consensus algorithm, we replicated our microservices in at least 3 machines with inherent fault tolerance, so even if a machine halted, the service would still be available. Our project received the highest grade in the class.
 
 ### Reinforcement Learning for Stochastic Multiagent Systems (Jan 2015 - Dec 2015)
 _Technologies: `Python`, `Numpy`, `OpenAI Gym`, `Reinforcement Learning`, `Q-learning`, `Multiagent Systems`, `Bayesian Programming`_<br>
@@ -24,12 +24,6 @@ _Code: [GitHub](https://github.com/unball/ieee-very-small)_
 In 2010, I joined the [UnBall Robot Soccer Team](http://equipeunball.com.br/), a university student team with one goal: build robots that can play soccer. I helped developing the AI and Computer Vision systems initially and, in 2014, I became the team Coordinator. My responsibilities included restructuring the team, which had been shut down at the time, and rebuild the project from scratch. I have worked in all technical areas, including AI, Computer Vision, Firmware, Communication, Control Systems, Electronics and 3D Printing, besides other areas such as Management, Recruitment and Finances. Since 2014, the team has participated in several national and international competitions and acquired financial stability and a sustainable recruitment process. In 2016, I assisted the UnBall Coordinator by being a Counselor, overseeing the future of the team.
 
 ## All Projects
-
-### Distributed Twitter Clone (Nov 2018 - Dec 2018)
-_Technologies: `Go`, `Raft`, `Protobuf`, `JavaScript`, `Web Components`, `Microservices`, `Consensus Algorithms`_<br>
-_Code: [GitHub](https://github.com/mds796/CSGY9223-Final)_
-
-In the Distributed Systems course at NYU, our team implemented a Twitter clone in a Microservices Architecture. By using Raft as a consensus algorithm, we replicated our microservices in at least 3 machines with inherent fault tolerance, so even if a machine halted, the service would still be available. Our project received the highest grade in the class.
 
 ### Lispy (Feb 2018 - May 2018)
 _Technologies: `Python`, `Lisp`, `TDD`, `Compilers`_<br>
@@ -54,6 +48,12 @@ _Technologies: `Python`, `Arduino`, `Infrared Sensors`, `Digital Communication`_
 _Code: [GitHub](https://github.com/matheusportela/control-your-laptop)_
 
 During my [#100DaysOfCode initiative](http://matheusportela.com/day-29-control-your-laptop), I realized it was a shame for a programmer to get out of my bed in order to play, pause and stop videos when my laptop was connected to my TV. Then, I reverse engineered my TV remote control protocol and built a simple receiver, using Arduino and an Infrared Receiver, to make my remote control transmit commands to my computer. You can check this prototype working [here](http://matheusportela.com/day-29-control-your-laptop).
+
+### Enigma Machine Simulator (Jun 2016 - Jul 2016)
+_Technologies: `JavaScript`, `Node.js`, `TDD`, `Simulators`_<br>
+_Code: [GitHub](https://github.com/matheusportela/enigma-machine/)_
+
+As part of my [#100DaysOfCode initiative](/day-1-enigma), I developed an [Enigma machine](https://en.wikipedia.org/wiki/Enigma_machine) simulator from the ground up. For about three weeks, I've studied the machine technical details, wrote the simulator code in JavaScript and Node.js using a Test-Driven Development approach, created a web interface, and documented the steps in blog articles. You can check the simulator [here](/enigma).
 
 ### Cipher Algorithms (May 2016 - Jun 2016)
 _Technologies: `C`, `Python`, `Python Extensions`_<br>
