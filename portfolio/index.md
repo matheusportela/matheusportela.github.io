@@ -27,7 +27,7 @@ _Technologies: `C++`, `Python`, `Web Crawling`, `Multi-Threading`, `Data Compres
 
 In the Web Search Engines course at NYU, I had to implement a web search engine from scratch. First, I developed a multi-threaded web crawler in Python able to crawl at least 100 pages/minute while prioritizing new and important domains and avoiding visiting the same domain concurrently. Then, I implemented a web search engine in C++ from scratch, without using third-party libraries. In doing so, I created an inverted index mapping all words to the documents containing them, implemented data compression using the variable-byte technique, wrote Okapi BM25 as the ranking function, and optimized the code in order to process more than 6.7 million web pages, containing almost 28 million unique terms, in about 3 hours and using less than 3 GB of RAM. The inverted index file size is 17 GB before compression and 6 GB after.
 
-### Ray Tracing Rendering
+### Ray Tracing Rendering (Oct 2019)
 _Technologies: `C++`, `Eigen`, `TBB`, `Multi-Threading`_<br>
 
 In the Computer Graphics course at NYU, I implemented a ray tracing algorithm from scratch in C++, i.e. rendering multiple primitives (spheres and triangles), simulating light (diffuse, specular, and ambient), reflection, colors, shadows, and perspective. I also implemented parallel pixel processing using [Intel TBB](https://github.com/intel/tbb) to speed up computations. The following images were rendered using my project.
