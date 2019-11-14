@@ -5,12 +5,12 @@ title: Portfolio
 
 ## Professional Projects
 
-###  Justworks (May 2019 - Ago 2019)
-_Technologies: `Ruby`, `Rails`, `JavaScript`, `React`, `TDD`, `Third-party APIs`_
+###  Justworks (May 2019 - Present)
+_Technologies: `Web Development`, `Ruby`, `Rails`, `JavaScript`, `React`, `Sidekiq`, `TDD`, `Third-Party APIs`_
 _Site: [justworks.com](https://justworks.com)_
 
-###  New York University (Sep 2018 - present)
-_Technologies: `MATLAB`, `Neural Networks`, `Research`_
+###  Control and Network Lab - New York University (Sep 2018 - present)
+_Technologies: `Optimization`, `MATLAB`, `Neural Networks`, `Research`_
 
 ###  Bxblue (Mar 2017 - Jul 2018)
 _Technologies: `Ruby`, `Rails`, `JavaScript`, `React`, `TDD`, `Third-party APIs`_
@@ -21,6 +21,21 @@ _Technologies: `Python`, `NoSQL`, `Scikit-learn`, `Web Crawlers`, `Big Data`, `A
 _Site: [slicingdice.com](https://slicingdice.com)_
 
 ## Top 3 Projects
+
+### Web Search Engine (Sep 2019 - Nov 2019)
+_Technologies: `C++`, `Python`, `Web Crawling`, `Multi-Threading`, `Data Compression`, `Inverted Index`, `Data Structures`_<br>
+
+In the Web Search Engines course at NYU, I had to implement a web search engine from scratch. First, I developed a multi-threaded web crawler in Python able to crawl at least 100 pages/minute while prioritizing new and important domains and avoiding visiting the same domain concurrently. Then, I implemented a web search engine in C++ from scratch, without using third-party libraries. In doing so, I created an inverted index mapping all words to the documents containing them, implemented data compression using the variable-byte technique, wrote Okapi BM25 as the ranking function, and optimized the code in order to process more than 6.7 million web pages, containing almost 28 million unique terms, in about 3 hours and using less than 3 GB of RAM. The inverted index file size is 17 GB before compression and 6 GB after.
+
+### Ray Tracing Rendering
+_Technologies: `C++`, `Eigen`, `TBB`, `Multi-Threading`_<br>
+
+In the Computer Graphics course at NYU, I implemented a ray tracing algorithm from scratch in C++, i.e. rendering multiple primitives (spheres and triangles), simulating light (diffuse, specular, and ambient), reflection, colors, shadows, and perspective. I also implemented parallel pixel processing using [Intel TBB](https://github.com/intel/tbb) to speed up computations. The following images were rendered using my project.
+
+<div style="display: flex;">
+    <img src="/assets/images/ray_tracing_1.png" style="width: 350px; height: 350px;" width="150" height="150"/>
+    <img src="/assets/images/ray_tracing_2.gif" style="width: 350px; height: 350px;" width="150" height="150"/>
+</div>
 
 ### Distributed Twitter Clone (Nov 2018 - Dec 2018)
 _Technologies: `Go`, `Raft`, `Protobuf`, `JavaScript`, `Web Components`, `Microservices`, `Consensus Algorithms`_<br>
