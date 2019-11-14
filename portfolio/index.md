@@ -33,8 +33,8 @@ _Technologies: `C++`, `Eigen`, `TBB`, `Multi-Threading`_<br>
 In the Computer Graphics course at NYU, I implemented a ray tracing algorithm from scratch in C++, i.e. rendering multiple primitives (spheres and triangles), simulating light (diffuse, specular, and ambient), reflection, colors, shadows, and perspective. I also implemented parallel pixel processing using [Intel TBB](https://github.com/intel/tbb) to speed up computations. The following images were rendered using my project.
 
 <div style="display: flex;">
-    <img src="/assets/images/ray_tracing_1.png" style="width: 350px; height: 350px;" width="150" height="150"/>
-    <img src="/assets/images/ray_tracing_2.gif" style="width: 350px; height: 350px;" width="150" height="150"/>
+    <img src="/assets/images/ray_tracing_1.png" style="width: 350px; height: 350px;" />
+    <img src="/assets/images/ray_tracing_2.gif" style="width: 350px; height: 350px;" />
 </div>
 
 ### Distributed Twitter Clone (Nov 2018 - Dec 2018)
