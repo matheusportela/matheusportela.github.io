@@ -3,6 +3,8 @@ layout: page
 title: Contact
 ---
 
+<img src="/assets/images/me.jpg" style="width: 200px;" />
+
 I am passionate about computers: hardware, software, theory, history... For the past few years, I have been working as a Software Developer, particularly using **Python** (my personal favorite language and [xkcd](http://xkcd.com/353) explains why), **Ruby on Rails** and **React**. In my free time, I love sailing on the fascinating sea of **Machine Learning** and **Distributed Systems**, as well as **Programming Patterns**, **Software Engineering**, **Startups**, **Lisp**, **Haskell**, and **Mathematics**. Check out my [portfolio](/portfolio) or [GitHub](http://github.com/matheusportela/) to see some projects I have put my hands on.
 
 Besides being a Software Developer, my interests include classical acoustic guitar (specially Brazilian styles, such as [Choro](https://www.youtube.com/watch?v=xDzekDP4IKI), [Samba](https://www.youtube.com/watch?v=XoUtxWU8lW8) and [Bossa Nova](https://www.youtube.com/watch?v=5LfaYKdqfnY)) and foreign languages (I speak Portuguese, English, and Spanish so far).

@@ -30,7 +30,7 @@ _Technologies: `C++`, `Eigen`, `TBB`, `Multi-Threading`_<br>
 
 As my final project for the Computer Graphics course at NYU, I implemented a non-linear Black Hole ray tracer algorithm from scratch in C++, using piecewise linear approximation and simulating gravitational lensing effects, besides implementing texture mapping and ray-disk intersection. My project closely followed the approach developed by [Antonelli](https://rantonels.github.io/starless/) and [Brant](https://dmitrybrant.com/2018/12/11/ray-tracing-black-holes). The following images were rendered using my project.
 
-<div style="display: flex;">
+<div style="display: flex; flex-wrap: wrap;">
     <img src="/assets/images/black-hole-0.gif" style="width: 350px; height: 350px;" />
     <img src="/assets/images/black-hole-1.gif" style="width: 350px; height: 350px;" />
     <img src="/assets/images/black-hole-2.gif" style="width: 350px; height: 350px;" />
@@ -67,7 +67,7 @@ _Technologies: `C++`, `Eigen`, `TBB`, `Multi-Threading`_<br>
 
 In the Computer Graphics course at NYU, I implemented a ray tracing algorithm from scratch in C++, i.e. rendering multiple primitives (spheres and triangles), simulating light (diffuse, specular, and ambient), reflection, colors, shadows, and perspective. I also implemented parallel pixel processing using [Intel TBB](https://github.com/intel/tbb) to speed up computations. The following images were rendered using my project.
 
-<div style="display: flex;">
+<div style="display: flex; flex-wrap: wrap;">
     <img src="/assets/images/ray_tracing_1.png" style="width: 350px; height: 350px;" />
     <img src="/assets/images/ray_tracing_2.gif" style="width: 350px; height: 350px;" />
 </div>

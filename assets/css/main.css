@@ -102,6 +102,7 @@ li {
 
 .nav-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin: 20px 40px;
     border-bottom-style: solid;
@@ -110,13 +111,12 @@ li {
 
 .navbar {
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    justify-content: space-between;
 }
 
 .navbar-item {
     font-family: 'Open Sans', sans-serif;
-    font-size: 0.85em;
+    font-size: 1.15em;
     text-decoration: none;
     text-transform: uppercase;
     border-bottom-style: none;
@@ -127,9 +127,8 @@ li {
 }
 
 .contact {
-    width: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .contact a {
@@ -190,6 +189,23 @@ li {
     .post-list-date {
         display: inline-block;
         width: 7em;
+    }
+
+    .nav-container {
+        flex-direction: row;
+    }
+
+    .navbar {
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    .navbar-item {
+        font-size: 0.85em;
+    }
+
+    .contact {
+        width: 10%;
     }
 }
 
