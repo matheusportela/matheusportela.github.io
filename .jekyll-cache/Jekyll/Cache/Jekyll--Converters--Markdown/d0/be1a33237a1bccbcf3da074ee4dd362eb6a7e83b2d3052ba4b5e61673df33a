@@ -1,0 +1,58 @@
+I"�<p>It’s been a while since my last post about <a href="day-21-habemus-enigma">the Enigma simulator</a> but it doesn’t mean I abandoned the #100DaysOfCode challenge. In fact, I’m here to share a little bit of a project I just finished: <strong>Control Your Laptop</strong>.</p>
+
+<h1 id="the-problem">The problem</h1>
+
+<p>I love watching movies, TV series, and online classes. Usually, it all happens in my bedroom, where I can watch them laying flat on my cozy bed and during the night. I don’t have cable TV in my room, so I usually connect my Macbook with a HDMI cable and play some videos using Netflix or simply VLC.</p>
+
+<p>The problem is: when I get sleepy, I need to get out of my bed, stop the video, and turn off the TV. By doing that, I wake up and it takes me a while before getting sleepy again. I needed a way to stop the video without getting out of the bed.</p>
+
+<p>My first idea was simply using my cellphone and some app to remotely control my laptop. However, this idea wouldn’t work. My cellphone’s battery is not that good and it has to stay connected to the charger, which is located on the other side of my bedroom, for the most part of the day and the entire night.</p>
+
+<p>Then, a second idea came to my head. I had bought an Arduino a few months earlier and I hadn’t used it yet. Why not hacking some stuff together and solve my problem? The ideal case would be to use my TV’s remote control to play/pause videos on my laptop.</p>
+
+<p>That’s how <strong>Control Your Laptop</strong> came to this world.</p>
+
+<h1 id="the-hardware">The hardware</h1>
+
+<p>I had to acquire some hardware to receive commands from my infrared remote control. After some research, I found out the TL1838 infrared receivers were ideal for this use case. They are small, operate in the 38 kHz frequency, filter out noise, and can be found on Amazon, eBay, Alibaba, Deal Extreme… I bought some of them online and studied the internals of this sensor with <a href="https://github.com/matheusportela/control-your-laptop/blob/master/references/Datasheet%20-%20TSOP1838.pdf">this datasheet</a>, which was really useful.</p>
+
+<p><img src="/assets/images/tsop1838.jpg" style="width: 10%;" /></p>
+
+<p>Next, I would have to build some interface to communicate the sensor with my computer. I realized I could save a lot of time by using an Arduino with USB connection and that’s exactly what I did by using an Arduino Nano, which cost less than USD 7.00 and has the USB jack I needed. <a href="https://github.com/matheusportela/control-your-laptop/blob/master/references/Arduino%20Nano%203.0%20-%20Pins.png">This pinout</a> allowed me to know exactly how to connect the sensor to the Arduino’s pins.</p>
+
+<p><img src="/assets/images/arduino_nano.jpg" style="width: 20%;" /></p>
+
+<h1 id="the-communication">The communication</h1>
+
+<p>Next step was figuring out how to decode control signals, i.e., I had to reverse engineer my control communication protocol. I started by studying <a href="https://github.com/matheusportela/control-your-laptop/blob/master/references/Data%20Formats%20for%20IR%20Remote%20Control.pdf">this tutorial on remote control protocols</a> and also built a <a href="https://github.com/matheusportela/control-your-laptop/blob/master/scripts/plot_signal.py">simple script</a> in Python to plot received signals in real-time. For instance, the following image represents the signal emitted by the control after pressing one button.</p>
+
+<p><img src="/assets/images/remote_control_signal.png" style="width: 30%;" /></p>
+
+<p>Of course, in order to achieve that, I had to write a <a href="https://github.com/matheusportela/control-your-laptop/tree/master/firmware">firmware to my Arduino</a> that could track with high precision how much time was spent in HIGH or LOW states. So, I dig a bit on ATmega counters and timers with the help of <a href="http://sphinx.mythic-beasts.com/~markt/ATmega-timers.html">this tutorial</a> and set a timer with 4 microsecond granularity. Hence, the firmware would only capture the duration for every HIGH or LOW and send them via USB to be processed by a script in my computer.</p>
+
+<h1 id="the-script">The script</h1>
+
+<p>The last part of this puzzle is simply interpreting the signals received by my IR sensor. I wrote a <a href="https://github.com/matheusportela/control-your-laptop/blob/master/scripts/control_your_laptop.py">Python script</a> to receive the durations from the USB, decode them as 0’s and 1’s, and play/pause videos. Since both VLC and Netflix accept the space bar to start and stop videos, I only had to figure out how to make my Python script generate a system wide key pressing event.</p>
+
+<p>On Macbook, it turns out that <a href="http://ss64.com/osx/osascript.html">osascript</a> with <a href="https://developer.apple.com/library/mac/documentation/AppleScript/Conceptual/AppleScriptX/AppleScriptX.html">AppleScript</a> is a pretty convenient way of doing so. I could execute it from my Python script and say something like <a href="https://github.com/matheusportela/control-your-laptop/blob/master/scripts/control_your_laptop.py#L233">“generate a space bar key down event to the front-most application”</a>.</p>
+
+<h1 id="the-results">The results</h1>
+
+<p>By now <strong>Control Your Laptop</strong> is working pretty fine. I could finally watch something before going to sleep and stop it without leaving my bed. The dog days are over!</p>
+
+<p><img src="/assets/images/control_your_laptop.jpg" style="width: 50%;" /></p>
+
+<center><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fmatheus.v.portela%2Fvideos%2F1125305287515256%2F&amp;show_text=0&amp;width=600" width="600" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe></center>
+
+<p>Nonetheless, there are several points of improvement in this project, such as:</p>
+
+<ul>
+  <li>Implement more remote control protocols to be decoded</li>
+  <li>Automatically identify the protocol being used by the remote control</li>
+  <li>Build an actual hardware, with PCB and 3D-printed case</li>
+</ul>
+
+<p>Anyway, that’s already useful and I’ll be much better off by using Control Your Laptop from now on. If you enjoyed this project, you can check the <a href="https://github.com/matheusportela/control-your-laptop/">GitHub repository</a> or send a tweet to <a href="https://twitter.com/matheusvportela">@matheusvportela</a>. I’ll be more than help to walk you through what has been done.</p>
+
+<p>See you later, guys.</p>
+:ET

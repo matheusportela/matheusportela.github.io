@@ -1,0 +1,110 @@
+I"o <p>During this journey of <a href="day-1-enigma">writing an Enigma simulator</a>, my first challenge is to understand how it works so I can then build a simulator. With this article, I’ll try and explain in simple words and images some of its components and how they relate to each other in order to encode messages.</p>
+
+<h1 id="keyboard-and-lampboard">Keyboard and lampboard</h1>
+
+<p>First, let’s take another look at Enigma.</p>
+
+<p><img src="/assets/images/enigma_outside.jpg" style="width: 30%;" /></p>
+
+<p>As you can see, there is a <strong>keyboard</strong> and a <strong>lampboard</strong> - the machine’s user interface. Whenever an operator types a letter, a lamp turns on indicating the encoded output. For instance, let’s consider that when the letter <code class="highlighter-rouge">A</code> is pressed, the letter <code class="highlighter-rouge">X</code> lamp in the lampboard turns on.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keyboard -&gt; A -&gt; ? -&gt; lampboard -&gt; X
+</code></pre></div></div>
+
+<h1 id="plugboard">Plugboard</h1>
+
+<p>The first internal component for letter encoding is the <strong>plugboard</strong>.</p>
+
+<p><img src="/assets/images/enigma_plugboard.jpg" style="width: 50%;" /></p>
+
+<p>Its job is simply to mess up with everything. Connecting two letters with a wire swaps their values whenever their keys are pressed. An example: consider we connect <code class="highlighter-rouge">B</code> and <code class="highlighter-rouge">M</code> in the plugboard. If we press letter <code class="highlighter-rouge">B</code>, the plugboard replaces it by a <code class="highlighter-rouge">M</code>, whereas pressing <code class="highlighter-rouge">M</code> makes the plugboard outputs <code class="highlighter-rouge">B</code>. Letters without wire connections simply pass through the plugboard without changes.</p>
+
+<p>In cryptographic words, the plugboard is a simple substitution cypher.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keyboard -&gt; A -&gt; plugboard -&gt; A -&gt; ? -&gt; lampboard -&gt; X
+</code></pre></div></div>
+
+<h1 id="rotors">Rotors</h1>
+
+<p>Then come the <strong>rotors</strong>.</p>
+
+<p><img src="/assets/images/enigma_rotors.jpg" style="width: 50%;" /></p>
+
+<p>Similarly to the plugboard, a rotor simply replaces an incoming letter by another one. The classical Enigma machine had 5 different models of rotors, enumerated from I to V, each one with different substitution routes in their electromechanical structures.</p>
+
+<p>The difference between a rotor and the plugboard is that after each encoding, the rotor <strong>steps</strong> one position, changing the circuits that are connected to each keyboard letter. As an effect, this procedure changes the substitution mapping applied by Enigma.</p>
+
+<p>Let’s make this more concrete with an example. At a given moment, a rotor has the following substitution mappings:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A -&gt; X
+B -&gt; Q
+C -&gt; Z
+...
+Y -&gt; L
+Z -&gt; M
+</code></pre></div></div>
+
+<p>We now use it to encode an incoming letter, say <code class="highlighter-rouge">B</code>, which is encoded to <code class="highlighter-rouge">Q</code>. As soon as the encoding has finished, the rotor takes one step and change its mappings by one position. So, <code class="highlighter-rouge">A</code> takes the mapping from <code class="highlighter-rouge">B</code>, <code class="highlighter-rouge">B</code> takes it from <code class="highlighter-rouge">C</code>, <code class="highlighter-rouge">C</code> from <code class="highlighter-rouge">D</code>, and so on.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A -&gt; Q
+B -&gt; Z
+C -&gt; I
+...
+Y -&gt; M
+Z -&gt; X
+</code></pre></div></div>
+
+<p>Notice that if I want to encode <code class="highlighter-rouge">B</code> again, now Enigma outputs <code class="highlighter-rouge">Z</code>. Amazing, isn’t it?</p>
+
+<p>There are a few more details regarding rotors. The first one is that, usually, an Enigma machine uses 3 rotors at the same time, instead of only one. The output of the first rotor goes to the second rotor to be encoded and then to the last one. Since there were 5 different rotor models (with different substitution ciphers in it), the operator has to choose 3 of them to use.</p>
+
+<p>Another thing is that, when using rotors in series, only the first rotor steps after an encoding, while the others remain still. If only one rotor steps, do the others keep still forever? No, the <strong>turnover</strong> effect prevents that. A rotor completing a full turn makes the next one execute one step. Think of it as a car odometer, which makes <code class="highlighter-rouge">09</code> becomes <code class="highlighter-rouge">10</code> whenever the rotor is crossing from <code class="highlighter-rouge">9</code> to <code class="highlighter-rouge">0</code>. A small detail is that each rotor model has a specific turnover position. For instance, rotor I will turnover when reaching letter <code class="highlighter-rouge">R</code>, rotor II with letter <code class="highlighter-rouge">F</code>, etc.</p>
+
+<p><img src="/assets/images/odometer.jpg" style="width: 50%;" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keyboard -&gt; A -&gt; plugboard -&gt; A -&gt; rotor 1 -&gt; W -&gt; rotor 2 -&gt; L -&gt; rotor 3 -&gt; Q -&gt; ? -&gt; lampboard -&gt; X
+</code></pre></div></div>
+
+<h1 id="reflector">Reflector</h1>
+
+<p>The last important component is the <strong>reflector</strong>.</p>
+
+<p><img src="/assets/images/enigma_reflector.jpg" style="width: 50%;" /></p>
+
+<p>The reflector, as its name insinuates, acts like a mirror, connecting pairs of letters in a symmetrical way. By symmetrical, I mean that if a letter <code class="highlighter-rouge">D</code> encodes to <code class="highlighter-rouge">Y</code>, then <code class="highlighter-rouge">Y</code> also encodes to <code class="highlighter-rouge">D</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A -&gt; X
+B -&gt; Q
+C -&gt; Z
+D -&gt; Y
+...
+Q -&gt; B
+...
+X -&gt; A
+Y -&gt; D
+Z -&gt; C
+</code></pre></div></div>
+
+<p>The reflector is also responsible to send the encoded letter <em>back</em> from where it came. The reflector output then run the inverse path through the rotors, the plugboard, until finally reaching the lampboard.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keyboard -&gt; A -&gt; plugboard -&gt; A -&gt; rotor 1 -&gt; W -&gt; rotor 2 -&gt; L -&gt; rotor 3 -&gt; Q -&gt; reflector -&gt; I -&gt; rotor 3 -&gt; J -&gt; rotor 2 -&gt; P -&gt; rotor 1 -&gt; Z -&gt; plugboard -&gt; T -&gt; lampboard -&gt; X
+</code></pre></div></div>
+
+<h1 id="letter-pathway">Letter pathway</h1>
+
+<p>Now we can finally understand the entire path of a letter being encoded by Enigma! Due to its symmetry by using a reflector, decoding a message is only a matter of typing the encoded letters through a correctly configured machine.</p>
+
+<p><img src="/assets/images/enigma_letter_path.png" style="width: 50%;" /></p>
+
+<p>I hope you could understand a little bit of how Enigma works with this article. If you have any questions or saw something that isn’t correct, please get in contact with me through my twitter account <a href="https://twitter.com/matheusvportela">@matheusvportela</a>. Also, check how my implementation of Enigma is going in <a href="https://github.com/matheusportela/enigma-machine">my GitHub repository</a>.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Enigma_machine">Enigma machine - Wikipedia</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Enigma_rotor_details">Enigma rotor details - Wikipedia</a></li>
+  <li><a href="http://enigma.louisedade.co.uk/howitworks.html">How Enigma Machines Work - Louise Dade</a></li>
+  <li><a href="http://www.cryptomuseum.com/crypto/enigma/working.htm">Working principle of the Enigma - Crypto Museum</a></li>
+  <li><a href="http://users.telenet.be/d.rijmenants/en/enigmatech.htm">Technical Details of the Enigma Machine - Dirk Rijmenants</a></li>
+</ul>
+:ET
