@@ -7,35 +7,40 @@ title: Portfolio
 
 ###  Justworks (May 2019 - Present)
 _Technologies: `Web Development`, `Ruby`, `Rails`, `JavaScript`, `React`, `Sidekiq`, `TDD`, `Third-Party APIs`_
+
 _Site: [justworks.com](https://justworks.com)_
 
-###  Control and Network Lab - New York University (Sep 2018 - present)
+###  Control and Network Lab - New York University (Sep 2018 - May 2019)
 _Technologies: `Optimization`, `MATLAB`, `Neural Networks`, `Research`_
 
 ###  Bxblue (Mar 2017 - Jul 2018)
 _Technologies: `Ruby`, `Rails`, `JavaScript`, `React`, `TDD`, `Third-party APIs`_
+
 _Site: [bxblue.com.br](https://bxblue.com.br)_
 
 ###  Simbiose Ventures (Nov 2015 - Feb 2017)
 _Technologies: `Python`, `NoSQL`, `Scikit-learn`, `Web Crawlers`, `Big Data`, `API Design`, `Third-party APIs`_
+
 _Site: [slicingdice.com](https://slicingdice.com)_
 
-## Top 3 Projects
+## Top 5 Projects
+
+### Black Hole Ray Tracing (Nov 2019 - Dec 2019)
+_Technologies: `C++`, `Eigen`, `TBB`, `Multi-Threading`_<br>
+
+As my final project for the Computer Graphics course at NYU, I implemented a non-linear Black Hole ray tracer algorithm from scratch in C++, using piecewise linear approximation and simulating gravitational lensing effects, besides implementing texture mapping and ray-disk intersection. My project closely followed the approach developed by [Antonelli](https://rantonels.github.io/starless/) and [Brant](https://dmitrybrant.com/2018/12/11/ray-tracing-black-holes). The following images were rendered using my project.
+
+<div style="display: flex;">
+    <img src="/assets/images/black-hole-0.gif" style="width: 350px; height: 350px;" />
+    <img src="/assets/images/black-hole-1.gif" style="width: 350px; height: 350px;" />
+    <img src="/assets/images/black-hole-2.gif" style="width: 350px; height: 350px;" />
+</div>
+
 
 ### Web Search Engine (Sep 2019 - Nov 2019)
 _Technologies: `C++`, `Python`, `Web Crawling`, `Multi-Threading`, `Data Compression`, `Inverted Index`, `Data Structures`_<br>
 
 In the Web Search Engines course at NYU, I had to implement a web search engine from scratch. First, I developed a multi-threaded web crawler in Python able to crawl at least 100 pages/minute while prioritizing new and important domains and avoiding visiting the same domain concurrently. Then, I implemented a web search engine in C++ from scratch, without using third-party libraries. In doing so, I created an inverted index mapping all words to the documents containing them, implemented data compression using the variable-byte technique, wrote Okapi BM25 as the ranking function, and optimized the code in order to process more than 6.7 million web pages, containing almost 28 million unique terms, in about 3 hours and using less than 3 GB of RAM. The inverted index file size is 17 GB before compression and 6 GB after.
-
-### Ray Tracing Rendering (Oct 2019)
-_Technologies: `C++`, `Eigen`, `TBB`, `Multi-Threading`_<br>
-
-In the Computer Graphics course at NYU, I implemented a ray tracing algorithm from scratch in C++, i.e. rendering multiple primitives (spheres and triangles), simulating light (diffuse, specular, and ambient), reflection, colors, shadows, and perspective. I also implemented parallel pixel processing using [Intel TBB](https://github.com/intel/tbb) to speed up computations. The following images were rendered using my project.
-
-<div style="display: flex;">
-    <img src="/assets/images/ray_tracing_1.png" style="width: 350px; height: 350px;" />
-    <img src="/assets/images/ray_tracing_2.gif" style="width: 350px; height: 350px;" />
-</div>
 
 ### Distributed Twitter Clone (Nov 2018 - Dec 2018)
 _Technologies: `Go`, `Raft`, `Protobuf`, `JavaScript`, `Web Components`, `Microservices`, `Consensus Algorithms`_<br>
@@ -56,6 +61,16 @@ _Code: [GitHub](https://github.com/unball/ieee-very-small)_
 In 2010, I joined the [UnBall Robot Soccer Team](http://equipeunball.com.br/), a university student team with one goal: build robots that can play soccer. I helped developing the AI and Computer Vision systems initially and, in 2014, I became the team Coordinator. My responsibilities included restructuring the team, which had been shut down at the time, and rebuild the project from scratch. I have worked in all technical areas, including AI, Computer Vision, Firmware, Communication, Control Systems, Electronics and 3D Printing, besides other areas such as Management, Recruitment and Finances. Since 2014, the team has participated in several national and international competitions and acquired financial stability and a sustainable recruitment process. In 2016, I assisted the UnBall Coordinator by being a Counselor, overseeing the future of the team.
 
 ## Other Personal Projects
+
+### Ray Tracing Rendering (Oct 2019)
+_Technologies: `C++`, `Eigen`, `TBB`, `Multi-Threading`_<br>
+
+In the Computer Graphics course at NYU, I implemented a ray tracing algorithm from scratch in C++, i.e. rendering multiple primitives (spheres and triangles), simulating light (diffuse, specular, and ambient), reflection, colors, shadows, and perspective. I also implemented parallel pixel processing using [Intel TBB](https://github.com/intel/tbb) to speed up computations. The following images were rendered using my project.
+
+<div style="display: flex;">
+    <img src="/assets/images/ray_tracing_1.png" style="width: 350px; height: 350px;" />
+    <img src="/assets/images/ray_tracing_2.gif" style="width: 350px; height: 350px;" />
+</div>
 
 ### Lispy (Feb 2018 - May 2018)
 _Technologies: `Python`, `Lisp`, `TDD`, `Compilers`_<br>

@@ -28,7 +28,7 @@ Nesse momento, dois personagens entram na narrativa: Thiago, designer, e Bruno, 
 
 Da união desses três personagens e dos sonhos de cada um, surgiu a [Baru](http://barudesign.com.br/), uma empresa que possui, em seu alicerce, princípios da sustentabilidade, da economia solidária e do comércio justo. Batalhando pelo seu espaço em Brasília, uma cidade sem tradição na indústria moveleira, em menos de um ano a Baru tornou-se um dos empreendimentos mais influentes da sua área, com [constante exposição na mídia e em eventos de design](http://barudesign.com.br/midia/).
 
-![Baru](/assets/images/baru-moveis.jpg)
+<img src="/assets/images/baru-moveis.jpg" style="width: 50%;" />
 
 Fernando, Thiago e Bruno decidiram fazer a diferença. Apesar de todos os desafios que surgiram, os três persistiram nessa caminhada e, hoje, impactam positivamente a vida de mais de 80 cooperados. A história deles, que ainda está longe de acabar, é uma inspiração para que todos nós lutemos pelos nossos sonhos e transformemos o impossível em possível.
 

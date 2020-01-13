@@ -19,7 +19,7 @@ During this journey of [writing an Enigma simulator](day-1-enigma), my first cha
 
 First, let's take another look at Enigma.
 
-<img src="/assets/images/enigma_outside.jpg" height="500">
+<img src="/assets/images/enigma_outside.jpg" style="width: 30%;">
 
 As you can see, there is a **keyboard** and a **lampboard** - the machine's user interface. Whenever an operator types a letter, a lamp turns on indicating the encoded output. For instance, let's consider that when the letter `A` is pressed, the letter `X` lamp in the lampboard turns on.
 
@@ -31,7 +31,7 @@ keyboard -> A -> ? -> lampboard -> X
 
 The first internal component for letter encoding is the **plugboard**.
 
-<img src="/assets/images/enigma_plugboard.jpg">
+<img src="/assets/images/enigma_plugboard.jpg" style="width: 50%;">
 
 Its job is simply to mess up with everything. Connecting two letters with a wire swaps their values whenever their keys are pressed. An example: consider we connect `B` and `M` in the plugboard. If we press letter `B`, the plugboard replaces it by a `M`, whereas pressing `M` makes the plugboard outputs `B`. Letters without wire connections simply pass through the plugboard without changes.
 
@@ -45,7 +45,7 @@ keyboard -> A -> plugboard -> A -> ? -> lampboard -> X
 
 Then come the **rotors**.
 
-<img src="/assets/images/enigma_rotors.jpg" height="400">
+<img src="/assets/images/enigma_rotors.jpg" style="width: 50%;">
 
 Similarly to the plugboard, a rotor simply replaces an incoming letter by another one. The classical Enigma machine had 5 different models of rotors, enumerated from I to V, each one with different substitution routes in their electromechanical structures.
 
@@ -79,7 +79,7 @@ There are a few more details regarding rotors. The first one is that, usually, a
 
 Another thing is that, when using rotors in series, only the first rotor steps after an encoding, while the others remain still. If only one rotor steps, do the others keep still forever? No, the **turnover** effect prevents that. A rotor completing a full turn makes the next one execute one step. Think of it as a car odometer, which makes `09` becomes `10` whenever the rotor is crossing from `9` to `0`. A small detail is that each rotor model has a specific turnover position. For instance, rotor I will turnover when reaching letter `R`, rotor II with letter `F`, etc.
 
-<img src="/assets/images/odometer.jpg" height="100">
+<img src="/assets/images/odometer.jpg" style="width: 50%;">
 
 ```
 keyboard -> A -> plugboard -> A -> rotor 1 -> W -> rotor 2 -> L -> rotor 3 -> Q -> ? -> lampboard -> X
@@ -89,7 +89,7 @@ keyboard -> A -> plugboard -> A -> rotor 1 -> W -> rotor 2 -> L -> rotor 3 -> Q 
 
 The last important component is the **reflector**.
 
-<img src="/assets/images/enigma_reflector.jpg">
+<img src="/assets/images/enigma_reflector.jpg" style="width: 50%;">
 
 The reflector, as its name insinuates, acts like a mirror, connecting pairs of letters in a symmetrical way. By symmetrical, I mean that if a letter `D` encodes to `Y`, then `Y` also encodes to `D`.
 
@@ -116,7 +116,7 @@ keyboard -> A -> plugboard -> A -> rotor 1 -> W -> rotor 2 -> L -> rotor 3 -> Q 
 
 Now we can finally understand the entire path of a letter being encoded by Enigma! Due to its symmetry by using a reflector, decoding a message is only a matter of typing the encoded letters through a correctly configured machine.
 
-<img src="/assets/images/enigma_letter_path.png">
+<img src="/assets/images/enigma_letter_path.png" style="width: 50%;">
 
 I hope you could understand a little bit of how Enigma works with this article. If you have any questions or saw something that isn't correct, please get in contact with me through my twitter account [@matheusvportela](https://twitter.com/matheusvportela). Also, check how my implementation of Enigma is going in [my GitHub repository](https://github.com/matheusportela/enigma-machine).
 

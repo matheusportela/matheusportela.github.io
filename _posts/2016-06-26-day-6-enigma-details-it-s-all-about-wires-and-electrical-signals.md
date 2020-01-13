@@ -19,20 +19,20 @@ Enigma is an electromechanical machine with electrical signals and mechanical pa
 
 One of the first questions I had was how Enigma distinguishes two letters in its circuit. It's quite simple: every component has 26 wires corresponding to alphabet letters. A letter being encoded is just a matter of one current jumping from wire to wire, starting from the keyboard until reaching the lampboard.
 
-<img src="/assets/images/enigma_wiring_diagram.gif" height="150">
+<img src="/assets/images/enigma_wiring_diagram.gif" style="width: 50%;">
 
 Rotors are quite remarkable in their engineering. One side has flat contacts while the other has pins, made of conductor material, connecting the output of one rotor to the input of another.
 
-<img src="/assets/images/enigma_rotor_pin_contacts.jpg" height="300">
-<img src="/assets/images/enigma_rotor_flat_contacts.jpg" height="300">
+<img src="/assets/images/enigma_rotor_pin_contacts.jpg" style="width: 25%;">
+<img src="/assets/images/enigma_rotor_flat_contacts.jpg" style="width: 25%;">
 
 Their encoding tables are defined by scrambling the wirings going from pin contacts to the flat ones.
 
-<img src="/assets/images/enigma_wiring.gif" height="300">
+<img src="/assets/images/enigma_wiring.gif" style="width: 25%;">
 
 Now, when one rotor steps, the rotation simply slides the input/output connections. As a side-effect, this simple mechanical procedure changes the current encoding.
 
-<img src="/assets/images/enigma_rotor_set.png" height="300">
+<img src="/assets/images/enigma_rotor_set.png" style="width: 50%;">
 
 The first military Enigma model had 5 rotors available, with different wiring tables built in their scrambled wiring structure. They where named in Roman numbers - I, II, III, IV, and V - and where visible in the pin contacts side of the rotor.
 
