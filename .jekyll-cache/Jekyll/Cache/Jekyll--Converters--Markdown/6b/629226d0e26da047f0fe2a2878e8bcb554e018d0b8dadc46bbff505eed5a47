@@ -1,0 +1,56 @@
+I"0<p>By now, I’m working on building an Enigma simulator for a while and the more I study about this amazing piece of technology, the more fascinated I become by the minds that built it. In fact, I can’t even imagine how much effort the ones at Bletchley Park put to break Enigma.</p>
+
+<p>If you actually think it through, breaking any code requires two elements: knowing the algorithm and the key. The former can be easily done by intercepting an Enigma machine from the enemy, whereas the later is about figuring out which configuration was used to encode the message.</p>
+
+<p>As we know by watching <a href="http://www.imdb.com/title/tt2084970/">The Imitation Game</a>, the Allies could get an Enigma in their hands and profoundly study it, equipping them with the algorithm. Hence, decoding German messages is only a matter of knowing the exact Enigma configuration used. However, how many possible configurations are there in Enigma?</p>
+
+<p>Let’s analyze it using good old <a href="https://en.wikipedia.org/wiki/Combinatorics">combinatorics</a>!</p>
+
+<h1 id="rotor-selection">Rotor selection</h1>
+
+<p>First, we must select our rotors and place them into the three available positions inside the machine. How many combinations of selections do we have? Since there are 5 rotor types for 3 places, it will be:</p>
+
+<script type="math/tex; mode=display">C_r = 5 \cdot 4 \cdot 3 = 60</script>
+
+<h1 id="rotor-settings">Rotor settings</h1>
+
+<p>Each rotor has 26 different starting positions that may be selected when we start using Enigma. That means the number of possible starting positions, taking all rotors into acount, is:</p>
+
+<script type="math/tex; mode=display">C_s = 26 \cdot 26 \cdot 26 = 17,576</script>
+
+<h1 id="plugboard">Plugboard</h1>
+
+<p>The plugboard - exclusive for military Enigma machines - was a brilliant idea. Their operators would use 10 cables to connect pairs of letters and swap them in the encoding process. Can you figure out how many combinations it provides?</p>
+
+<p>Let’s make this calculation step-by-step.</p>
+
+<p>First, we need to select 26 letters from the alphabet. When choosing the first letter, we have 26 candidates. For the second, there are 25 candidates, For the third letter, 24, and so on. This gives us <script type="math/tex">26!</script> possible ways to select 26 letters.</p>
+
+<p>However, we only have 10 cables, right? Since each cable connects two letters, our cables are able to connect only 20 letters out of 26 and we must remove from out combinations the 6 idle letters. Hence, the number of possible connections is <script type="math/tex">\frac{26!}{6!}</script>.</p>
+
+<p>Note that it doesn’t matter in what order the connections are made. For example, if we connect a cable from <code class="highlighter-rouge">A</code> to <code class="highlighter-rouge">Q</code> and next from <code class="highlighter-rouge">B</code> to <code class="highlighter-rouge">M</code>, it’ll be the same configuration of connecting first <code class="highlighter-rouge">B</code> to <code class="highlighter-rouge">M</code> and then <code class="highlighter-rouge">A</code> to <code class="highlighter-rouge">Q</code>. Removing these ordering effects leaves us with <script type="math/tex">\frac{26!}{6! 10!}</script> combinations.</p>
+
+<p>Finally, connecting <code class="highlighter-rouge">A</code> to <code class="highlighter-rouge">Q</code> is the same as connecting <code class="highlighter-rouge">Q</code> to <code class="highlighter-rouge">A</code>: our plugboard is reflexive. Since we don’t care about the ordering of the combinations, we must remove these repetitions. We have 10 pairs and there are 10 repetitions to remove, thus <script type="math/tex">\frac{26!}{6! 10! 2^{10}}</script>.</p>
+
+<p>That’s it. The number of possible settings for the plugboard is:</p>
+
+<script type="math/tex; mode=display">C_p = \frac{26!}{6! 10! 2^{10}} = 150,738,274,937,250</script>
+
+<h1 id="number-of-possible-configurations">Number of possible configurations</h1>
+
+<p>The total number of possible configurations for the Enigma machine, considering rotors selection, rotors starting positions, and plugboard configuration, is incredible:</p>
+
+<script type="math/tex; mode=display">C_t = C_r \cdot C_s \cdot C_p = 158,962,555,217,826,360,000</script>
+
+<p><img src="/assets/images/not_bad.gif" /></p>
+
+<p>Now we understand what Enigma represents. Even if we consider that a modern computer could make one configuration guess in 1 microsecond, which is very optimistic (not taking GPUs into account), it would take more than 4 years to try all possible configurations! When comparing with older substitution and polyalphabetic ciphers, Enigma is orders and orders and orders of magnitude better.</p>
+
+<p>This mathematical development is based on the following video, where Dr. James Grime provides a beautiful and didactic mathematical proof. I strongly recommend everyone to watch it.</p>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/G2_Q9FoD-oQ" frameborder="0" allowfullscreen=""></iframe></center>
+
+<p>That’s it for today, folks.</p>
+
+<p>Did you like this post? If so, get in contact with me via my twitter account <a href="https://twitter.com/matheusvportela">@matheusvportela</a> and follow <a href="https://github.com/matheusportela/enigma-machine">my GitHub repository</a>, where I’m developing a Enigma simulator in JavaScript.</p>
+:ET

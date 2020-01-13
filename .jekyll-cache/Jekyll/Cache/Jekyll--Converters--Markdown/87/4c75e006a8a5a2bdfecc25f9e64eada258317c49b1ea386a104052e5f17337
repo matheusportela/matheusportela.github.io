@@ -1,0 +1,14 @@
+I"<p>After about three weeks of studying Enigma’s technical components, learning JavaScript details, and tweaking CSS to select the best font, I can finally say: <strong>HABEMUS ENIGMA!</strong></p>
+
+<p><img src="/assets/images/tetra.gif" /></p>
+
+<p>You can access it’s web interface right <a href="/enigma">here</a> and check out its code at <a href="https://github.com/matheusportela/enigma-machine">my GitHub repository</a>.</p>
+
+<p>I’m really proud of finally understanding something on this incredible machine. It was pretty tough sometimes to figure out some components behaviours in encoding and decoding messages, specially when the names are in German. Also, during this process, I realized design isn’t my strongest skill, so don’t mind if the web interface isn’t as beautiful as it could be.</p>
+
+<p>Anyway, if you have any questions or suggestions, please send a tweet to <a href="https://twitter.com/matheusvportela">@matheusvportela</a>. I’ll be glad to help you and improve this simple simulator.</p>
+
+<p>By now, I still have about 80 days left in my #100DaysOfCode challenge. I still need to better define what to do next, but it’ll probably be something to do with <a href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a>.</p>
+
+<p>See you guys soon!</p>
+:ET

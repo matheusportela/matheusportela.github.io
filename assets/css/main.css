@@ -100,13 +100,18 @@ li {
     }
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 40px;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
 .navbar {
     display: flex;
     justify-content: space-around;
-    border-bottom-style: solid;
-    border-bottom-width: thin;
-    padding: 5px 0;
-    margin: 0 40px;
+    width: 50%;
 }
 
 .navbar-item {
@@ -119,6 +124,20 @@ li {
 
 .navbar-item-active {
     color: #bc1b00;
+}
+
+.contact {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact a {
+    border-bottom-style: none;
+}
+
+.contact i {
+    font-size: 28px;
 }
 
 .page, .post, .related {

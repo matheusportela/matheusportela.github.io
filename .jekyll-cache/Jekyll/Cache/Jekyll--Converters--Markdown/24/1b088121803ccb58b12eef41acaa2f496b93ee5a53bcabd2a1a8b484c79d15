@@ -1,0 +1,25 @@
+I"�<p>Before starting build my <a href="https://en.wikipedia.org/wiki/Enigma_machine">Enigma</a> simulator, I decided to use a <a href="http://agiledata.org/essays/tdd.html">Test-Driven Development (TDD)</a> approach. Why? Because I believe that with TDD every programmer - including you - can produce more robust software, do easier refactoring, and meet the software specifications.</p>
+
+<p>For those who never heard about TDD, it pretty much a different style of programming advocated by <a href="https://en.wikipedia.org/wiki/Kent_Beck">Kent Beck</a> and <a href="http://daveastels.com/">David Astels</a>, some really influential guys in the wild. Instead of writing your classes and methods and then testing it - either manually or with auxiliary scripts - to ensure it’s working, TDD states that we must write tests in the first place. TDD, can be resumed in three steps:</p>
+
+<ol>
+  <li>Write the specifications of what you want in the format of an automated test and verify it <strong>fails</strong></li>
+  <li>Implement the functionality to make the test <strong>pass</strong> in the easiest possible way (as baby steps that are small but takes you there)</li>
+  <li><strong>Refactor</strong> the code to make it more simple, elegant, performatic, readable, reusable…</li>
+</ol>
+
+<p><img src="/assets/images/tdd.png" /></p>
+
+<p>To apply TDD to my JavaScript code, I decided to use two libraries with names of drinks: <a href="https://mochajs.org/"><strong>mocha</strong></a> and <a href="http://chaijs.com/"><strong>chai</strong></a>. Let me explain them.</p>
+
+<p><code class="highlighter-rouge">mocha</code> is a test framework that runs on <a href="https://nodejs.org/">Node.js</a>. It basically runs over your code looking for test functions, execute them in parallel, and output the passing and failing tests in a pretty output format. On the other hand, <code class="highlighter-rouge">chai</code> is an assertion library. It pretty much offers three functions for asserting inside tests: <code class="highlighter-rouge">should</code>, <code class="highlighter-rouge">expect</code>, and <code class="highlighter-rouge">assert</code>. You can find more information on these assertion styles in their <a href="http://chaijs.com/api/">docs</a>.</p>
+
+<p>After writing some code, that’s how I execute them:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>mocha enigma.js
+</code></pre></div></div>
+
+<p><img src="/assets/images/mocha_output.png" height="350" /></p>
+
+<p>That’s it. With <code class="highlighter-rouge">mocha</code> and <code class="highlighter-rouge">chai</code>, I’m all set for writing JavaScript using TDD. What do you use in your programming environment for TDD? Please, let me know by sending me tweet to my twitter account <a href="https://twitter.com/matheusvportela">@matheusvportela</a>. You can also check all the tests I’ve written so far by following <a href="https://github.com/matheusportela/enigma-machine">my GitHub repository</a>.</p>
+:ET
