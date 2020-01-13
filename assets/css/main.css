@@ -7,16 +7,19 @@
 
 body {
     margin-bottom: 50px;
+    background-color: #222;
+    color: #ddd;
+    line-height: 2;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lora', serif;
-    font-weight: lighter;
-    color: #900;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 h1 {
     font-size: 1.8em;
+    margin-top: 40px;
 }
 
 h2 {
@@ -44,17 +47,16 @@ p, li {
 }
 
 pre {
-    background-color: #f6f6f6;
+    background-color: #1a1a1a;
     border-radius: 2px;
     padding: 0 5px;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 code {
     font-family: 'Droid Sans Mono', monospace;
     font-size: 0.9em;
-    color: #bc1b00;
-    background-color: #f6f6f6;
+    color: #CC4121;
     border-radius: 2px;
     padding: 0 5px;
 }
@@ -67,11 +69,11 @@ a {
     text-decoration: none;
     border-bottom-style: dotted;
     border-bottom-width: 1px;
-    color: #2c3e50;
+    color: #0FCFFF;
 }
 
 a:hover {
-    color: #bc1b00;
+    color: #03FFA6;
 }
 
 img {
@@ -99,11 +101,12 @@ li {
 }
 
 .navbar {
+    display: flex;
+    justify-content: space-around;
     border-bottom-style: solid;
     border-bottom-width: thin;
     padding: 5px 0;
     margin: 0 40px;
-    text-align: center;
 }
 
 .navbar-item {
@@ -123,7 +126,7 @@ li {
 }
 
 .site-title, .page-title, .post .post-title {
-    font-family: 'Lora', serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     margin-bottom: 0.3em;
 }
