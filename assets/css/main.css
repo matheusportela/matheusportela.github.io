@@ -134,6 +134,7 @@ li {
 .contact {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 20px;
 }
 
 .contact a {
@@ -211,6 +212,7 @@ li {
 
     .contact {
         width: 10%;
+        margin-top: auto;
     }
 }
 
