@@ -19,28 +19,26 @@ Enigma is an electromechanical machine with electrical signals and mechanical pa
 
 One of the first questions I had was how Enigma distinguishes two letters in its circuit. It's quite simple: every component has 26 wires corresponding to alphabet letters. A letter being encoded is just a matter of one current jumping from wire to wire, starting from the keyboard until reaching the lampboard.
 
-<img src="/assets/images/enigma_wiring_diagram.gif" style="width: 50%;">
+<img src="/assets/images/enigma_wiring_diagram.gif" style="width: 500px;">
 
 Rotors are quite remarkable in their engineering. One side has flat contacts while the other has pins, made of conductor material, connecting the output of one rotor to the input of another.
 
-<img src="/assets/images/enigma_rotor_pin_contacts.jpg" style="width: 25%;">
-<img src="/assets/images/enigma_rotor_flat_contacts.jpg" style="width: 25%;">
+<img src="/assets/images/enigma_rotor_pin_contacts.jpg" style="width: 250px;">
+<img src="/assets/images/enigma_rotor_flat_contacts.jpg" style="width: 250px;">
 
 Their encoding tables are defined by scrambling the wirings going from pin contacts to the flat ones.
 
-<img src="/assets/images/enigma_wiring.gif" style="width: 25%;">
+<img src="/assets/images/enigma_wiring.gif" style="width: 250px;">
 
 Now, when one rotor steps, the rotation simply slides the input/output connections. As a side-effect, this simple mechanical procedure changes the current encoding.
 
-<img src="/assets/images/enigma_rotor_set.png" style="width: 50%;">
+<img src="/assets/images/enigma_rotor_set.png" style="width: 450px;">
 
 The first military Enigma model had 5 rotors available, with different wiring tables built in their scrambled wiring structure. They where named in Roman numbers - I, II, III, IV, and V - and where visible in the pin contacts side of the rotor.
 
 Now, setting up an Enigma machine is just a matter of choosing the right rotor models, placing them in the correct order and positioning, and connecting the appropriate plugs in the plugboard.
 
-The following video is a really didactic presentation on the inner workings of Enigma. I highly recommend watching it in order to get deeper knowledge on the machine.
-
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/mcX7iO_XCFA" frameborder="0" allowfullscreen></iframe></center>
+[This video, by Dr. James Grime,](https://www.youtube.com/watch?v=mcX7iO_XCFA) is a really didactic presentation on the inner workings of Enigma. I highly recommend watching it in order to get deeper knowledge on the machine.
 
 Are you feeling like finally connecting the pieces of Enigma's puzzle? If so, get in contact with me via my twitter account [@matheusvportela](https://twitter.com/matheusvportela). Also follow [my GitHub repository](https://github.com/matheusportela/enigma-machine) and check my developments on the Enigma simulator in JavaScript.
 

@@ -23,7 +23,7 @@ Let's make things more concrete by giving an example. When I need to communicate
 
 First, I have a process called **producer** that generates messages to be processed. Then, we have the **message queue** that stores messages in a **queue** - acting as a buffer - and route them to a **consumer**, some process that will process messages. Since a single queue is shared between virtually any number of producers and consumers, we can easily design systems to be scaled up quite easily by simply spawning more processes on more machines as far as they communicate through the same queue.
 
-<img src="/assets/images/message_queue.png">
+<img src="/assets/images/message_queue.png" style="width: 400px;">
 
 Queues provide asynchronous communication: each process controls its own flow and get messages when **they** are ready. As a consequence, message queues inherently enhance workload distribution given that computers will keep retrieving one more message and processing it until all incoming messages have been processed. Imagine the other scenario where we pre-assign messages to consumers before hand. It might happen that one process has finished processing all of its data whereas another one is struggling with its own workload. Since messages were assigned exclusively to the slow process, the quick one cannot jump over and help it finishing its job. We have idle resources even though there is work to be done. Point for message queues.
 

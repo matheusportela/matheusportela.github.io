@@ -63,9 +63,7 @@ $$C_t = C_r \cdot C_s \cdot C_p = 158,962,555,217,826,360,000$$
 
 Now we understand what Enigma represents. Even if we consider that a modern computer could make one configuration guess in 1 microsecond, which is very optimistic (not taking GPUs into account), it would take more than 4 years to try all possible configurations! When comparing with older substitution and polyalphabetic ciphers, Enigma is orders and orders and orders of magnitude better.
 
-This mathematical development is based on the following video, where Dr. James Grime provides a beautiful and didactic mathematical proof. I strongly recommend everyone to watch it.
-
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/G2_Q9FoD-oQ" frameborder="0" allowfullscreen></iframe></center>
+This mathematical development is based on [this video](https://www.youtube.com/watch?v=G2_Q9FoD-oQ), where Dr. James Grime provides a beautiful and didactic mathematical proof. I strongly recommend everyone to watch it.
 
 That's it for today, folks.
 

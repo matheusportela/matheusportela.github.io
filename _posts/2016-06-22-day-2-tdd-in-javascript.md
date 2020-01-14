@@ -22,7 +22,7 @@ For those who never heard about TDD, it pretty much a different style of program
 2. Implement the functionality to make the test **pass** in the easiest possible way (as baby steps that are small but takes you there)
 3. **Refactor** the code to make it more simple, elegant, performatic, readable, reusable...
 
-<img src="/assets/images/tdd.png" style="width: 30%;">
+<img src="/assets/images/tdd.png" style="width: 275px; background-color: white;">
 
 To apply TDD to my JavaScript code, I decided to use two libraries with names of drinks: [**mocha**](https://mochajs.org/) and [**chai**](http://chaijs.com/). Let me explain them.
 
@@ -34,6 +34,6 @@ After writing some code, that's how I execute them:
 $ mocha enigma.js
 ```
 
-<img src="/assets/images/mocha_output.png" style="width: 50%;">
+<img src="/assets/images/mocha_output.png" style="width: 450px;">
 
 That's it. With `mocha` and `chai`, I'm all set for writing JavaScript using TDD. What do you use in your programming environment for TDD? Please, let me know by sending me tweet to my twitter account [@matheusvportela](https://twitter.com/matheusvportela). You can also check all the tests I've written so far by following [my GitHub repository](https://github.com/matheusportela/enigma-machine).
