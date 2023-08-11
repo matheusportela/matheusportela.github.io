@@ -15,7 +15,8 @@ Besides being a Software Developer, my interests include classical acoustic guit
 - Jun 2012 - Jun 2013: Exchange program at the [Australian National University](http://www.anu.edu.au)
 
 ## Experience
-- Jan 2020 - Present: Software Engineer at [Justworks](https://justworks.com/)
+- Jan 2023 - Present: Senior Software Engineer at [Justworks](https://justworks.com/)
+- Jan 2020 - Dec 2022: Software Engineer at [Justworks](https://justworks.com/)
 - May 2019 - Dec 2019: Software Engineer Intern at [Justworks](https://justworks.com/)
 - Sep 2018 - May 2019: Graduate Research Assistant at [Control and Network Lab](http://eeweb.poly.edu/~canlab/), [NYU Tandon School of Engineering](https://engineering.nyu.edu)
 - Mar 2017 - Jul 2018: Software Developer at [Bxblue (YC S17)](https://bxblue.com.br/), accelerated by [Y Combinator](https://blog.ycombinator.com/bxblue-is-the-only-marketplace-for-payroll-secured-loans-in-brazil/)
@@ -26,12 +27,13 @@ Besides being a Software Developer, my interests include classical acoustic guit
 - Dec 2012 - Mar 2013: Research Intern at [CSIRO, Australia](http://www.csiro.au/)
 
 ## Technical Skills
+- Software Engineering: `Web Development`, `Back-End Development`, `Front-End Development`, `Software Architecture`, `Domain-Driven Design`, `Service-Oriented Architecture`, `Hexagonal Architecture`, `Test-Driven Development`, `Agile Development`, `Scrum`
 - Programming Languages: `Python`, `Ruby`, `C`, `C++`, `JavaScript`, `Go`, `Java`, `C#`, `Bash Script`, `MATLAB`
 - Further interests: `Lisp`, `Haskell`, `Julia`, `Assembly`
 - Web Frameworks: `Rails`, `Django`, `React`, `Redux`, `Flask`
 - Databases: `PostgreSQL`, `MySQL`, `MongoDB`, `Redis`, `Elasticsearch`
 - DevOps: `Docker`, `AWS`, `Ansible`
-- Machine Learning Tools: `PyTorch`, `Numpy`, `Scikit-learn`, `Pandas`, `Tensorflow`
+- Machine Learning Tools: `PyTorch`, `Numpy`, `Scikit-learn`, `Pandas`, `Tensorflow`, `Reinforcement Learning`, `Deep Learning`
 - Big Data: `Hadoop`, `Spark`, `Giraph`, `HDFS`
 - Others: `OpenCV`, `Arduino`, `Raspberry Pi`, `OpenGL`, `Hardware`, `ROS`, `Robotics`
 
