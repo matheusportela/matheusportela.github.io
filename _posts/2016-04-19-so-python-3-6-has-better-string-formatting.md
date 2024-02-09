@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: So, Python 3.6 has better string formatting
 excerpt: Differently from Python 3.5, which introduced lots of new features to the
   language, the 3.6 release is basically about enhancing performance, fixing bugs
