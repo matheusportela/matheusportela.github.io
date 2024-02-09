@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: true
+published: false
 title: "Compilando Tensorflow 1.4 com suporte a GPU"
 date: '2017-12-05 23:55:00 -0200'
 categories:

@@ -2,13 +2,12 @@
 layout: post
 status: publish
 published: true
-title: "Control Your Laptop - Day 29 #100DaysOfCode"
+title: "Control Your Laptop"
 date: '2016-07-27 22:40:00 +0000'
 date_gmt: '2016-07-28 01:40:00 +0000'
 categories:
 - Programming
 tags:
-- 100DaysOfCode
 - arduino
 - hardware
 - hacking
@@ -16,7 +15,7 @@ tags:
 comments: []
 ---
 
-It's been a while since my last post about [the Enigma simulator](day-21-habemus-enigma) but it doesn't mean I abandoned the #100DaysOfCode challenge. In fact, I'm here to share a little bit of a project I just finished: **Control Your Laptop**.
+I'm here to share a little bit of a project I just finished: **Control Your Laptop**.
 
 # The problem
 

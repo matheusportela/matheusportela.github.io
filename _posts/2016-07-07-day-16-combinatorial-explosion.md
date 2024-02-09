@@ -2,13 +2,12 @@
 layout: post
 status: publish
 published: true
-title: "Combinatorial explosion - Day 16 #100DaysOfCode"
+title: "Combinatorial explosion"
 date: '2016-07-07 22:41:00 +0000'
 date_gmt: '2016-07-08 01:41:00 +0000'
 categories:
 - Programming
 tags:
-- 100DaysOfCode
 - enigma
 - cryptanalysis
 comments: []

@@ -2,13 +2,12 @@
 layout: post
 status: publish
 published: true
-title: 'TDD in Javascript - Day 2 #100DaysOfCode'
+title: 'TDD in Javascript'
 date: '2016-06-22 23:33:00 +0000'
 date_gmt: '2016-06-23 02:33:00 +0000'
 categories:
 - Programming
 tags:
-- 100DaysOfCode
 - javascript
 - tdd
 comments: []

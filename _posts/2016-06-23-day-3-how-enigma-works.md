@@ -2,13 +2,12 @@
 layout: post
 status: publish
 published: true
-title: 'How Enigma works - Day 3 #100DaysOfCode'
+title: 'How Enigma works'
 date: '2016-06-23 22:08:00 +0000'
 date_gmt: '2016-06-24 01:08:00 +0000'
 categories:
 - Programming
 tags:
-- 100DaysOfCode
 - enigma
 comments: []
 ---

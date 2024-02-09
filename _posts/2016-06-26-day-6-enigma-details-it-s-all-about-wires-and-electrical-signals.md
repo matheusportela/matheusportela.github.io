@@ -2,13 +2,12 @@
 layout: post
 status: publish
 published: true
-title: "Enigma details: it's all about wires and electrical signals - Day 6 #100DaysOfCode"
+title: "Enigma details: it's all about wires and electrical signals"
 date: '2016-06-26 20:43:00 +0000'
 date_gmt: '2016-06-26 23:43:00 +0000'
 categories:
 - Programming
 tags:
-- 100DaysOfCode
 - enigma
 comments: []
 ---
