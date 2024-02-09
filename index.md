@@ -31,8 +31,8 @@ Besides being a Software Developer, my interests include classical acoustic guit
 - Programming Languages: `Python`, `Ruby`, `C`, `C++`, `JavaScript`, `Go`, `Java`, `C#`, `Bash Script`, `MATLAB`
 - Further interests: `Lisp`, `Haskell`, `Julia`, `Assembly`
 - Web Frameworks: `Rails`, `Django`, `React`, `Redux`, `Flask`
-- Databases: `PostgreSQL`, `MySQL`, `MongoDB`, `Redis`, `Elasticsearch`
-- DevOps: `Docker`, `AWS`, `Ansible`
+- Databases: `PostgreSQL`, `MySQL`, `MariaDB`, `MongoDB`, `Redis`, `Elasticsearch`
+- DevOps: `Kubernetes`, `Docker`, `AWS`, `Ansible`
 - Machine Learning Tools: `PyTorch`, `Numpy`, `Scikit-learn`, `Pandas`, `Tensorflow`, `Reinforcement Learning`, `Deep Learning`
 - Big Data: `Hadoop`, `Spark`, `Giraph`, `HDFS`
 - Others: `OpenCV`, `Arduino`, `Raspberry Pi`, `OpenGL`, `Hardware`, `ROS`, `Robotics`
