@@ -50,7 +50,7 @@ p, li {
 pre {
     background-color: #1a1a1a;
     border-radius: 2px;
-    padding: 0 5px;
+    padding: 10px;
     overflow-x: auto;
 }
 
@@ -93,6 +93,16 @@ figcaption {
 li {
     margin: 10px 0;
     list-style-type: square;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    padding: 0 10px;
+    border-left-style: solid;
+    border-left-width: 5px;
+    border-left-color: #0FCFFF;
+    background-color: #1a1a1a;
 }
 
 .content {

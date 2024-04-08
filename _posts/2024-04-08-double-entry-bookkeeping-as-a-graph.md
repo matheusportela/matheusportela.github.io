@@ -322,28 +322,32 @@ Let's consider a more complex example. When Alice buys the book, she accidentall
 As we did before, we model this flow by creating new accounts: one for the credit card company and another for the tax authority. Then, when creating the transaction, we add new entries as necessary.
 
 ```
-| Account | Transaction | Description                | Date       | Debit | Credit |
-| ------- | ----------  | -------------------------- | ---------- | ----- | ------ |
-| Bank    | 1           | Alice's opening balance    | 2024-01-01 |       | $100   |
-| Bank    | 2           | Bob's opening balance      | 2024-01-01 |       | $50    |
+| Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
+| Bank    | 1           | Alice's opening balance    | 2024-01-01 |          | $100     |
+| Bank    | 2           | Bob's opening balance      | 2024-01-01 |          | $50      |
 
-| Account | Transaction | Description                | Date       | Debit | Credit |
-| Alice   | 1           | Opening balance            | 2024-01-01 | $100  |        |
-| Alice   | 3           | Bought book                | 2024-02-01 |       | $20    |
-| Alice   | 3           | Foreign exchange fee       | 2024-02-01 |       | $2     |
+| Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
+| Alice   | 1           | Opening balance            | 2024-01-01 | $100     |          |
+| Alice   | 3           | Bought book                | 2024-02-01 |          | $20      |
+| Alice   | 3           | Foreign exchange fee       | 2024-02-01 |          | $2       |
 
-| Account | Transaction | Description                | Date       | Debit | Credit |
-| Bob     | 2           | Opening balance            | 2024-01-01 | $50   |        |
-| Bob     | 3           | Sold book                  | 2024-02-01 | $20   |        |
-| Bob     | 3           | Sales tax                  | 2024-02-01 |       | $2     |
-| Bob     | 3           | Credit card fee            | 2024-02-01 |       | $1     |
+| Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
+| Bob     | 2           | Opening balance            | 2024-01-01 | $50      |          |
+| Bob     | 3           | Sold book                  | 2024-02-01 | $20      |          |
+| Bob     | 3           | Sales tax                  | 2024-02-01 |          | $2       |
+| Bob     | 3           | Credit card fee            | 2024-02-01 |          | $1       |
 
-| Account | Transaction | Description                | Date       | Debit | Credit |
-| CC      | 3           | Alice's credit card fee    | 2024-02-01 | $2    |        |
-| CC      | 3           | Bob's credit card fee      | 2024-02-01 | $1    |        |
+| Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
+| CC      | 3           | Alice's credit card fee    | 2024-02-01 | $2       |          |
+| CC      | 3           | Bob's credit card fee      | 2024-02-01 | $1       |          |
 
-| Account | Transaction | Description                | Date       | Debit | Credit |
-| Tax     | 3           | Bob's sales tax            | 2024-02-01 | $2    |        |
+| Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
+| Tax     | 3           | Bob's sales tax            | 2024-02-01 | $2       |          |
 ```
 
 Once again, we aren't modelling the real world exactly since Alice and Bob most likely use different credit cards and pay different taxes. However, we're creating balanced transactions and representing the correct balances for each account.
@@ -358,7 +362,7 @@ Think about this: An account is a _node_ in the graph, a credit entry is an _out
 
 Let's take a look at the example we've been using so far. First, we fund Alice's and Bob's accounts with money from the bank:
 
-![alt text](<../assets/images/double-entry-bookkeeping/Picture 1.drawio.svg>)
+![Graph for the first example: Alice's and Bob's initial balances with the Bank as a source](<../assets/images/double-entry-bookkeeping/Picture 1.drawio.svg>)
 
 A few comments on this graph:
 - An account is a round node with the account name.
@@ -371,40 +375,46 @@ We can see that transaction 1 moves $100 from the bank to Alice. Transaction 2 m
 
 Then, Alice buys a book from Bob:
 
-![alt text](<../assets/images/double-entry-bookkeeping/Picture 2.drawio.svg>)
+![Graph for the second example: Alice buys a book from Bob](<../assets/images/double-entry-bookkeeping/Picture 2.drawio.svg>)
 
 We can see that transaction 3 moves $20 from Alice to Bob. An account's balances is simply the sum of the amounts of the incoming edges minus the sum of the amounts of the outgoing edges. Hence, Alice has $80 and Bob, $70.
 
 We haven't added fees and taxes yet. Let's do this:
 
-![alt text](<../assets/images/double-entry-bookkeeping/Picture 3.drawio.svg>)
+![Graph for the third example: fees and taxes](<../assets/images/double-entry-bookkeeping/Picture 3.drawio.svg>)
 
 Granted, transaction 3 is more complex as it conflates what Alice is paying Bob with the fees and taxes. We could split this transaction into two:
 
 
 ```
-| Account | Transaction | Description                | Date       | Debit | Credit |
-| ------- | ----------  | -------------------------- | ---------- | ----- | ------ |
-| Bank    | 1           | Alice's opening balance    | 2024-01-01 |       | $100   |
-| Bank    | 2           | Bob's opening balance      | 2024-01-01 |       | $50    |
+| Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
+| Bank    | 1           | Alice's opening balance    | 2024-01-01 |          | $100     |
+| Bank    | 2           | Bob's opening balance      | 2024-01-01 |          | $50      |
 
-| Account | Transaction | Description                | Date       | Debit | Credit |
-| Alice   | 1           | Opening balance            | 2024-01-01 | $100  |        |
-| Alice   | 3           | Bought book                | 2024-02-01 |       | $22    |
+| Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
+| Alice   | 1           | Opening balance            | 2024-01-01 | $100     |          |
+| Alice   | 3           | Bought book                | 2024-02-01 |          | $22      |
 
-| Account | Transaction | Description                | Date       | Debit | Credit |
-| Bob     | 2           | Opening balance            | 2024-01-01 | $50   |        |
-| Bob     | 3           | Sold book                  | 2024-02-01 | $19   |        |
-| Bob     | 4           | Sales tax                  | 2024-02-01 |       | $2     |
+| Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
+| Bob     | 2           | Opening balance            | 2024-01-01 | $50      |          |
+| Bob     | 3           | Sold book                  | 2024-02-01 | $19      |          |
+| Bob     | 4           | Sales tax                  | 2024-02-01 |          | $2       |
 
-| Account | Transaction | Description                | Date       | Debit | Credit |
-| CC      | 3           | Transaction fee            | 2024-02-01 | $3    |        |
+| Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
+| CC      | 3           | Transaction fee            | 2024-02-01 | $3       |          |
 
-| Account | Transaction | Description                | Date       | Debit | Credit |
-| Tax     | 4           | Bob's sales tax            | 2024-02-01 | $2    |        |
+| Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
+| Tax     | 4           | Bob's sales tax            | 2024-02-01 | $2       |          |
 ```
 
-![alt text](<../assets/images/double-entry-bookkeeping/Picture 4.drawio.svg>)
+And as a graph:
+
+![Graph for the fourth example: simplified transactions](<../assets/images/double-entry-bookkeeping/Picture 4.drawio.svg>)
 
 We simplified the transactions a little bit:
 - Alice sees $22 leaving her account but Bob only receives $19. The remaining $3 goes to the credit card company.
