@@ -5,7 +5,7 @@ published: true
 title: 'Double-Entry Bookkeeping is a Directed Graph'
 date: '2024-04-08 00:00:00 -0500'
 categories:
-- Culture
+- Business
 tags:
 - accounting
 - graphs
