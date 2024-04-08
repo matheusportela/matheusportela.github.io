@@ -433,6 +433,8 @@ In the next article, we'll dive deeper into basic accounting concepts and see ho
 ## Resources
 
 When studying these concepts, I found the following resources particularly helpful:
+- [Accounting & Financial Statement Analysis: Complete Training](https://www.udemy.com/course/accounting-fsa-a-solid-foundation-for-a-career-in-finance/): A crash course in accounting in Udemy. It was my introduction to the topic and I highly recommend it.
+- [Mastering Accounting by George Bright and Michael Herbert](https://link.springer.com/book/10.1007/978-1-349-20618-6): A textbook that covers accounting from the basics to more advanced topics. Another great resource to deepen my understanding of accounting.
 - [Beancount's documentation](https://beancount.github.io/docs/the_double_entry_counting_method.html) has a great explanation of accounting as a graph over time. It was a big inspiration for this article.
 - [Modern Treasury](https://www.moderntreasury.com/journal/accounting-for-developers-part-i) has a great series of articles that explain accounting concepts for developers. It is another big inspiration.
 - [This particular thread on Hacker News](https://news.ycombinator.com/item?id=32495724). Some comments are gold!
