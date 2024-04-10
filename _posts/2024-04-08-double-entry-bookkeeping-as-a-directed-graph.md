@@ -330,7 +330,7 @@ Let's assume all of the money that Alice and Bob have comes from a bank. Then, l
 | Bob     | 3           | Sold book                  | 2024-02-01 | $20      |          |
 ```
 
-In this example, we don't care where the opening balances come from exactly. We just need to make sure money is coming from somewhere. The bank account is a kind of phony account that is there just to help us follow the rules. In accounting terms, it is called a [contra account](https://en.wikipedia.org/wiki/Debits_and_credits#Contra_account) to the other accounts. The important thing is that all transactions are **balanced**, i.e., "credits equal debits".
+In this example, we don't care where the opening balances come from exactly. We just need to make sure money is coming from somewhere. The bank account is a kind of phony account that is there just to help us follow the rules. In accounting terms, it is called a [contra account](https://en.wikipedia.org/wiki/Debits_and_credits#Contra_account) to the other accounts. The important thing is that all transactions are **balanced**, i.e., "credits equal debits". It acts as a simple [checksum](https://en.wikipedia.org/wiki/Checksum) that helps accountants to catch mistakes, especially when they were doing things manually.
 
 > **Definition 7: Contra Account**
 >
