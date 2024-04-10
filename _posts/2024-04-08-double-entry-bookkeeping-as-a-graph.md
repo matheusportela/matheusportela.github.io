@@ -138,7 +138,7 @@ This system we implemented right now is called a [**single-entry bookkeeping**](
 
 Ledgers are sometimes called **journal** or **book** because, in the past, they were physical books where accountants would write down transactions. In the modern world, though, they're usually stored in a database.
 
-<center><figure><img src="/assets/images/double-entry-bookkeeping/handwritten-ledger.jpg" alt="Picture of a 1926 handwritten ledger" style="width: 350px;" /><figcaption>A 1926 handwritten ledger. Notice the accountant calculated the cash and bank balances daily. Source: <a href="https://www.business-case-analysis.com/ledger.html">Business Case Analysis</a>.</figcaption></figure></center>
+<center><figure><img src="/assets/images/double-entry-bookkeeping/handwritten-ledger.jpg" alt="Picture of a 1926 handwritten ledger" style="width: 500px;" /><figcaption>A 1926 handwritten ledger. Notice the accountant calculated the cash and bank balances daily. Source: <a href="https://www.business-case-analysis.com/ledger.html">Business Case Analysis</a>.</figcaption></figure></center>
 
 An important characteristic of a ledger is that the data is _immutable_. Once an entry is written, it cannot be changed at all because we want to preserve the ledger's full history. No more erasing or scribbling over entries.
 
@@ -265,7 +265,7 @@ Debit                          Alice's account                           Credit
 
 This format is commonly referred to as a [T-account](https://en.wikipedia.org/wiki/Debits_and_credits#T-accounts) (an analogy to the same: the top with the account name, the left side with debits, and the right side with credits). For this reason, many accountants will refer to debits as entries that go on the left side and credits as the ones that go on the right side.
 
-<center><figure><img src="/assets/images/double-entry-bookkeeping/general-post-office-accounting-book.jpg" alt="Picture of the General Post Office T-account as instituted by Benjamin Franklin" style="width: 350px;" /><figcaption>General Post Office T-account as instituted by Benjamin Franklin. Source: <a href="https://postalmuseum.si.edu/object/npm_1982.0786.1">Smithsonian National Post Museum</a>.</figcaption></figure></center>
+<center><figure><img src="/assets/images/double-entry-bookkeeping/general-post-office-accounting-book.jpg" alt="Picture of the General Post Office T-account as instituted by Benjamin Franklin" style="width: 650px;" /><figcaption>General Post Office T-account as instituted by Benjamin Franklin. Source: <a href="https://postalmuseum.si.edu/object/npm_1982.0786.1">Smithsonian National Post Museum</a>.</figcaption></figure></center>
 
 Computer systems don't need to use this format, though, as it doesn't necessary prevent software bugs. Instead, it is common to have a single amount column and another column to indicate whether the amount is a debit or a credit. For example:
 
