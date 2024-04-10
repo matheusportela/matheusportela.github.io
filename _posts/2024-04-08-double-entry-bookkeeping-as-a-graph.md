@@ -413,7 +413,7 @@ We haven't added fees and taxes yet. Let's do this:
 
 ![Graph for the third example: fees and taxes](<../assets/images/double-entry-bookkeeping/Picture 3.drawio.svg>)
 
-Granted, transaction 3 is more complex as it conflates what Alice is paying Bob with the fees and taxes. We could split this transaction into two:
+Oof, that's a lot of edges! Transaction 3 is very complex as it conflates what Alice is paying Bob with the fees and taxes they pay to other parties. We could make this easier by splitting this transaction into two smaller ones:
 
 ```
 | Account | Transaction | Description                | Date       | Incoming | Outgoing |
@@ -449,7 +449,7 @@ We simplified the transactions a little bit:
 - Alice sees $22 leaving her account but Bob only receives $19. The remaining $3 goes to the credit card company.
 - Bob pays sales taxes in a different transaction.
 
-Regardless of how we model the transactions, the account balances are the same. Alice has $78, Bob has $68, the tax authority has $2, and the credit card company has $3. It is the accountant's job to decide how to group transactions and entries in a way that makes sense for the business as the bookkeeping system is flexible enough to accommodate different needs.
+Regardless of how we model the transactions, the account balances are the same. Alice has $78, Bob has $69, the tax authority has $2, and the credit card company has $3. It is the accountant's job to decide how to group transactions and entries in a way that makes sense for the business as the bookkeeping system is flexible enough to accommodate different needs.
 
 These simple examples show how we can visualize money flow in a double-entry bookkeeping system as a directed graph. The graph grows over time as new transactions are added but it's properties remain the same. In my opinion, understanding bookkeeping as a graph is a powerful way to reason about many accounting concepts. Suddenly, things as _balance sheets_, _income statements_, and _cash flow statements_ are just visualizations of this graph. Categories such as _assets_, _liabilities_, _equity_, _income_, and _expenses_ are just groups of nodes in the graph and it is quite easy to understand whether credits or debits increase their balances. It's a way to make accounting more intuitive and less intimidating to me!
 
