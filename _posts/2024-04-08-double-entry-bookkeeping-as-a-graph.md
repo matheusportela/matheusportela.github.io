@@ -179,6 +179,7 @@ Let's revisit the example of Alice buying the book from Bob and see the ledgers 
 | Alice   | Bought book        | 2024-02-01 | -$20   | $80     |
 
 | Account | Description        | Date       | Amount | Balance |
+| ------- | ------------------ | ---------- | ------ | ------- |
 | Bob     | Opening balance    | 2024-01-01 | $50    | $50     |
 | Bob     | Sold book          | 2024-02-01 | $20    | $70     |
 ```
@@ -194,6 +195,7 @@ A first step in making this relationship explicit is to group related entries in
 | Alice   | 3           | Book sale          | 2024-02-01 | -$20   | $80     |
 
 | Account | Transaction | Description        | Date       | Amount | Balance |
+| ------- | ----------  | ------------------ | ---------- | ------ | ------- |
 | Bob     | 2           | Opening balance    | 2024-01-01 | $50    | $50     |
 | Bob     | 3           | Book sale          | 2024-02-01 | $20    | $70     |
 ```
@@ -232,6 +234,7 @@ When Alice pays Bob $20, we say Alice's account is credited $20 and Bob's accoun
 | Alice   | 3           | Bought book        | 2024-02-01 |       | $20    |
 
 | Account | Transaction | Description        | Date       | Debit | Credit |
+| ------- | ----------  | ------------------ | ---------- | ----- | ------ |
 | Bob     | 2           | Opening balance    | 2024-01-01 | $50   |        |
 | Bob     | 3           | Sold book          | 2024-02-01 | $20   |        |
 ```
@@ -303,10 +306,12 @@ Let's assume all of the money that Alice and Bob have comes from a bank. Then, w
 | Bank    | 2           | Bob's opening balance      | 2024-01-01 |          | $50      |
 
 | Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
 | Alice   | 1           | Opening balance            | 2024-01-01 | $100     |          |
 | Alice   | 3           | Bought book                | 2024-02-01 |          | $20      |
 
 | Account | Transaction | Description                | Date       | Incoming | Outgoing |
+| ------- | ----------  | -------------------------- | ---------- | -------- | -------- |
 | Bob     | 2           | Opening balance            | 2024-01-01 | $50      |          |
 | Bob     | 3           | Sold book                  | 2024-02-01 | $20      |          |
 ```
