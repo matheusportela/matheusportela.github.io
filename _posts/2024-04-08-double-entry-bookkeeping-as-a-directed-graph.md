@@ -231,7 +231,7 @@ Traditionally, accountants would use two columns to represent the flow of money 
 >
 > An entry that represents money entering an account.
 
-(Pro-tip: Ignore what you know about credit and debit cards for now.)
+(Pro-tip: Ignore what you know about credit and debit cards for now. The terms are used somewhat differently in banking.)
 
 When Alice pays Bob $20, we say Alice's account is credited $20 and Bob's account is debited $20. Let's represent this in our table:
 
@@ -276,7 +276,7 @@ Computer systems don't need to use this format, though, as it doesn't necessaril
 | Alice   | 3           | Bought book        | 2024-02-01 | Credit | $20    |
 ```
 
-Second, notice how we're using a positive number even when money is leaving Alice's account. Historically, accountants don't like negative numbers in the books as they only became popular much later in Europe. Computer systems are very good with negative numbers, though. Instead of having two columns, we could just use a single column and adopt a convention in which credits are negative and debits are positive, or vice-versa. For example:
+Second, notice how we're using a positive number even when money is leaving Alice's account. Historically, accountants don't like negative numbers. In fact, Europeans weren't a big fan of negative numbers [until quite recently](https://en.wikipedia.org/wiki/Negative_number#History) and modern accounting was heavily influenced by [13th-century Italian merchants](https://en.wikipedia.org/wiki/Double-entry_bookkeeping#History). Computer systems are very good with negative numbers, though. Instead of having two columns, we could just use a single column and adopt a convention in which credits are negative and debits are positive, or vice-versa. For example:
 
 ```
 | Account | Transaction | Description        | Date       | Amount |
