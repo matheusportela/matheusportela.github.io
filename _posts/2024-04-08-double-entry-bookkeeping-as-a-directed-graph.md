@@ -28,7 +28,7 @@ Disclaimer: in this article, I'll simplify some concepts and use slightly differ
 
 ## Bookkeeping Without Ledgers
 
-At its core, accounting is about keeping track of countable things over time. Some of the oldest documents archelogists have found register quantities in old societies: food, animals, people, money. Nowadays, accounting is usually interested in tracking money whereas other areas (such as inventory management or the census bureau) count the rest. For the rest of this article, we'll focus on money.
+At its core, accounting is about keeping track of countable things over time. Some of the oldest documents archelogists have found register quantities in old societies: food, animals, people, money. Nowadays, accounting is usually interested in tracking money, whereas other areas (such as inventory management or the census bureau) count the rest. For the rest of this article, we'll focus on money.
 
 Let's start with a very simple example. Imagine you're in a small town with two people: Alice and Bob. Alice has $100 in her pocket and Bob has $50 as of January 1st, 2024. We'll record this data in a table as follows:
 
@@ -62,7 +62,7 @@ Before proceeding, let's name a few things. In our records, Alice and Bob are **
 >
 > The amount of money in an account at a given point in time.
 
-Every month, we can go around town, ask people how much money they have and write it down. We're basically creating a snapshot of the town's financial situation monthly. (Surely, most people will be annoyed by this breach of privacy and I would probably be arrested for stalking but let's ignore this for now.)
+Every month, we can go around town, ask people how much money they have and write it down. We're basically creating a snapshot of the town's financial situation monthly. (Surely, most people will be annoyed by this breach of privacy and I would probably be arrested for stalking, but let's ignore this for now.)
 
 What kinds of questions can we answer with this data? Actually, many!
 - How much money does each person have?
@@ -77,7 +77,7 @@ Now, consider Alice comes to us one day and asks "How come I have $80? I thought
 
 Why is this so?
 
-Well, we're only keeping track of the _current_ balance of each account. Because we erase the old balance and replace it with a new one, we don't know exactly what happened to that balance over time. We lose the changes that happened between snapshots are lost.
+Well, we're only keeping track of the _current_ balance of each account. Because we erase the old balance and replace it with a new one, we don't know exactly what happened to that balance over time. We lose the changes that happened between snapshots.
 
 Could we do better?
 
@@ -98,7 +98,7 @@ To do this, we'll change the table a little bit. For example, we write down that
 We added some columns to the table:
 - **Description**: A human-readable explanation of the transaction (e.g. what it is about, who got paid, a reference number, etc).
 - **Date**: When the transaction happened. Besides ordering transactions, this field can be used to group transactions by period (e.g. monthly reports). It can be enhanced with time information (e.g. hour, minute, second) if needed.
-- **Balance**: The balance of the account after the transaction. This field is redundant but it's useful when inspecting the data.
+- **Balance**: The balance of the account after the transaction. This field is redundant, but it's useful when inspecting the data.
 
 So far, so good.
 
@@ -144,7 +144,7 @@ An important characteristic of a ledger is that the data is _immutable_. Once an
 
 This raises the question: what happens if we make a mistake?
 
-Here's an example. Say the correct price for the book is $30 but we wrote down $20. If we were in a mutable system, we could just update the amount in the original entry as follows:
+Here's an example. Say the correct price for the book is $30, but we wrote down $20. If we were in a mutable system, we could just update the amount in the original entry as follows:
 
 ```
 | Account | Description     | Date       | Amount | Balance |
@@ -192,7 +192,7 @@ Let's revisit the example of Alice buying the book from Bob and see the ledgers 
 | Bob     | Sold book          | 2024-02-01 | $20    | $70     |
 ```
 
-Did you notice how the transactions are related to each other? The $20 Alice spent is the same $20 Bob received. We know that but the system doesn't since we're not explicitly stating this relationship in our ledgers. It could be the case the Alice bought the book from Bob and Bob received the money from Charlie. We can't tell the difference when reading the ledgers.
+Did you notice how the transactions are related to each other? The $20 Alice spent is the same $20 Bob received. _We_ know that, but the system doesn't, since we're not explicitly stating this relationship in our ledgers. It could be the case the Alice bought the book from Bob and Bob received the money from Charlie. We can't tell the difference when reading the ledgers.
 
 A first step in making this relationship explicit is to group related entries into a **transaction**. Let's add the `Transaction` column to our table:
 
@@ -267,7 +267,7 @@ This format is commonly referred to as a [T-account](https://en.wikipedia.org/wi
 
 <center><figure><img src="/assets/images/double-entry-bookkeeping/general-post-office-accounting-book.jpg" alt="Picture of the General Post Office T-account as instituted by Benjamin Franklin" style="width: 650px;" /><figcaption>General Post Office T-account as instituted by Benjamin Franklin. Source: <a href="https://postalmuseum.si.edu/object/npm_1982.0786.1">Smithsonian National Post Museum</a>.</figcaption></figure></center>
 
-Computer systems don't need to use this format, though, as it doesn't necessary prevent software bugs. Instead, it is common to have a single amount column and another column to indicate whether the amount is a debit or a credit. For example:
+Computer systems don't need to use this format, though, as it doesn't necessarily prevent software bugs. Instead, it is common to have a single amount column and another column to indicate whether the amount is a debit or a credit. For example:
 
 ```
 | Account | Transaction | Description        | Date       | Type   | Amount |
@@ -285,7 +285,7 @@ Second, notice how we're using a positive number even when money is leaving Alic
 | Alice   | 3           | Bought book        | 2024-02-01 | -$20   |
 ```
 
-If you pay close attention to this last example, this is exactly what we were doing before. The difference is that now we understand that the amount is negative because it's a credit. (Technically, using negative numbers for credits might be a limitation if we're trying to undo a credit entry without creating a debit entry but we don't need to be that picky for now.)
+If you pay close attention to this last example, this is exactly what we were doing before. The difference is that now we understand that the amount is negative because it's a credit. (Technically, using negative numbers for credits might be a limitation if we're trying to undo a credit entry without creating a debit entry, but we don't need to be that picky for now.)
 
 Finally, I'm not a big fan of old nomenclature for tradition's sake. We could rename credits as _outgoing_ money and debits as _incoming_ money without losing precision. In my opinion, this is a bit less confusing.
 
@@ -303,7 +303,7 @@ Finally, I'm not a big fan of old nomenclature for tradition's sake. We could re
 
 Sweet!
 
-A fundamental principle of double-entry bookkeeping is that the total amount of money in the system remains the same after each transaction. A particular account can increase or decrease its balance over time but the sum of _all_ balances must remain constant. Nothing is lost, nothing is created, everything is _transacted_. It is a closed system.
+A fundamental principle of double-entry bookkeeping is that the total amount of money in the system remains the same after each transaction. A particular account can increase or decrease its balance over time, but the sum of _all_ balances must remain constant. Nothing is lost, nothing is created, everything is _transacted_. It is a closed system.
 
 > **Definition 6: Double-Entry Ledger**
 >
@@ -379,7 +379,7 @@ We modified transaction 3 as follows:
 
 Notice that transaction 3 has _more than two entries_. It has eight entries, to be precise. This is perfectly fine! We can have as many entries as we need to represent the flow of money between accounts as long as the transaction is balanced, i.e., credits = debits.
 
-It is a common mistake to think that _double_-entry bookkeeping limits transactions to two entries at a time. The technique is called "double-entry" not because there are only two entries but because each transaction has _two sides_: one side where money leaves an account and another side where money enters another account. I guess "many-entry bookkeeping" doesn't sound as good.
+It is a common mistake to think that _double_-entry bookkeeping limits transactions to two entries at a time. The technique is called "double-entry" not because there are only two entries, but because each transaction has _two sides_: one side where money leaves an account and another side where money enters another account. I guess "many-entry bookkeeping" doesn't sound as good.
 
 ## Double-Entry Bookkeeping is a Directed Graph
 
@@ -446,12 +446,12 @@ And as a graph:
 ![Graph for the fourth example: simplified transactions](<../assets/images/double-entry-bookkeeping/Picture 4.drawio.svg>)
 
 We simplified the transactions a little bit:
-- Alice sees $22 leaving her account but Bob only receives $19. The remaining $3 goes to the credit card company.
+- Alice sees $22 leaving her account, but Bob only receives $19. The remaining $3 goes to the credit card company.
 - Bob pays sales taxes in a different transaction.
 
 Regardless of how we model the transactions, the account balances are the same. Alice has $78, Bob has $69, the tax authority has $2, and the credit card company has $3. It is the accountant's job to decide how to group transactions and entries in a way that makes sense for the business as the bookkeeping system is flexible enough to accommodate different needs.
 
-These simple examples show how we can visualize money flow in a double-entry bookkeeping system as a directed graph. The graph grows over time as new transactions are added but it's properties remain the same. In my opinion, understanding bookkeeping as a graph is a powerful way to reason about many accounting concepts. Suddenly, things as _balance sheets_, _income statements_, and _cash flow statements_ are just visualizations of this graph. Categories such as _assets_, _liabilities_, _equity_, _income_, and _expenses_ are just groups of nodes in the graph and it is quite easy to understand whether credits or debits increase their balances. It's a way to make accounting more intuitive and less intimidating to me!
+These simple examples show how we can visualize money flow in a double-entry bookkeeping system as a directed graph. The graph grows over time as new transactions are added, but it's properties remain the same. In my opinion, understanding bookkeeping as a graph is a powerful way to reason about many accounting concepts. Suddenly, things as _balance sheets_, _income statements_, and _cash flow statements_ are just visualizations of this graph. Categories such as _assets_, _liabilities_, _equity_, _income_, and _expenses_ are just groups of nodes in the graph and it is quite easy to understand whether credits or debits increase their balances. It's a way to make accounting more intuitive and less intimidating to me!
 
 We could go on and on with this example, adding more complexity to the transactions, creating new accounts, and visualizing the graph as it grows. But I think we did a great job today and should take a well-deserved break.
 
