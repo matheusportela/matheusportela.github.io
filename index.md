@@ -40,5 +40,5 @@ Besides being a Software Developer, my interests include classical acoustic guit
 ## Foreign Languages
 - Portuguese (Native)
 - English (Fluent)
-- Spanish (Advanced)
+- Spanish (Fluent)
 - French (Intermediate)
