@@ -19,7 +19,7 @@ Besides being a Software Developer, my interests include classical acoustic guit
 - Jan 2020 - Dec 2022: Software Engineer at [Justworks](https://justworks.com/)
 - May 2019 - Dec 2019: Software Engineer Intern at [Justworks](https://justworks.com/)
 - Sep 2018 - May 2019: Graduate Research Assistant at [Control and Network Lab](http://eeweb.poly.edu/~canlab/), [NYU Tandon School of Engineering](https://engineering.nyu.edu)
-- Mar 2017 - Jul 2018: Software Developer at [Bxblue (YC S17)](https://bxblue.com.br/), accelerated by [Y Combinator](https://blog.ycombinator.com/bxblue-is-the-only-marketplace-for-payroll-secured-loans-in-brazil/)
+- Mar 2017 - Jul 2018: Software Developer at [Bx Blue (YC S17)](https://bxblue.com.br/), accelerated by [Y Combinator](https://blog.ycombinator.com/bxblue-is-the-only-marketplace-for-payroll-secured-loans-in-brazil/) and acquired by [PicPay](https://picpay.com/)
 - Jan 2017 - Jun 2017: Lecturer in Software Engineering at [University of Brasília](http://www.unb.br)
 - Nov 2015 - Feb 2017: Software Developer at [Simbiose Ventures](http://www.simbioseventures.com)
 - Mar 2014 - Dec 2015: General Manager at [UnBall Robot Soccer Team](http://equipeunball.wordpress.com/)

@@ -149,6 +149,7 @@ blockquote {
 
 .contact a {
     border-bottom-style: none;
+    margin-right: 10px;
 }
 
 .contact i {
@@ -218,10 +219,11 @@ blockquote {
 
     .navbar-item {
         font-size: 0.85em;
+        margin-right: 10px;
     }
 
     .contact {
-        width: 10%;
+        width: 20%;
         margin-top: auto;
     }
 }
