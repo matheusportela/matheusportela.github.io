@@ -6,7 +6,7 @@ title: Portfolio
 ## Professional Projects
 
 ###  Justworks (May 2019 - Present)
-_Technologies: `Web Development`, `Domain-Driven Design`, `Software Architecture`, `Distributed Systems`, `Ruby`, `Rails`, `JavaScript`, `React`, `Sidekiq`, `Kafka`, `TDD`, `Third-Party APIs`_
+_Technologies: `Web Development`, `Domain-Driven Design`, `Software Architecture`, `Distributed Systems`, `Ruby`, `Rails`, `JavaScript`, `React`, `Temporal`, `Sidekiq`, `Kafka`, `TDD`, `Third-Party APIs`_
 
 _Site: [justworks.com](https://justworks.com)_
 
